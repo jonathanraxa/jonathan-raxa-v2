@@ -1,0 +1,62 @@
+.leftAlign {
+  text-align: left;
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+.colorRed {
+  color: #c56161;
+}
+.Collapsible__trigger {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Projects .paddBottom1em {
+  padding-bottom: 1em;
+}
+.NavBarResume {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.noMarginBottom {
+  margin-bottom: 0;
+}
+.Resume {
+  margin-top: 1em;
+}
+.location {
+  margin-top: 1rem;
+}
+.top-nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* hover state over projects */
+.Collapsible__trigger {
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+}
+/* 
+.tooltiptext {
+     visibility: hidden;
+    width: 65%;
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1em 0em;
+    position: absolute;
+    z-index: 1;
+}
+
+.portfolio-item:hover .tooltiptext {
+  visibility: visible;
+} */
