@@ -1,20 +1,16 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-// import { HomeLayout } from "@/layouts/home-layout";
-// import { ProfileLayout } from "@/layouts/profile-layout";
-// import { RegisterPage } from "@/pages/register-page";
-// import { ConnectionLayout } from "@/layouts/connection-layout";
-import { App } from "@/App.jsx";
+import { HomePage, SFSUPage } from "@/pages";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
   },
-  // {
-  //   path: "/home",
-  //   element: <HomeLayout />,
-  // },
+  {
+    path: "/sfsu",
+    element: <SFSUPage />,
+  },
   // {
   //   path: "/login",
   //   element: <LoginPage />,

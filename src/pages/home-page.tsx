@@ -1,13 +1,11 @@
 import { Contact } from "@/components/evergreen/contact";
 import { Hero } from "@/components/hero";
-import { AboutMe } from "@/components/about-me";
 import { Experience } from "@/components/experience";
 
-export const App = () => {
+export const HomePage = () => {
   return (
     <>
       <Hero />
-      <AboutMe />
       <Experience />
       <Contact />
     </>
