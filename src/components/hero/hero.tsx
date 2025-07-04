@@ -55,7 +55,13 @@ export const Hero = () => {
               variant="outline"
               className="cursor-pointer hover:text-yellow-500"
             >
-              Resume
+              <Link
+                to={routes.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </Link>
             </Button>
           </div>
         </div>

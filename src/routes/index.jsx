@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import { HomePage, SFSUPage } from "@/pages";
+import { HomePage, SFSUPage, ResumePage } from "@/pages";
 
 export const router = createBrowserRouter([
   {
@@ -11,10 +11,10 @@ export const router = createBrowserRouter([
     path: "/sfsu",
     element: <SFSUPage />,
   },
-  // {
-  //   path: "/login",
-  //   element: <LoginPage />,
-  // },
+  {
+    path: "/resume",
+    element: <ResumePage />,
+  },
   // {
   //   path: "/register",
   //   element: <RegisterPage />,

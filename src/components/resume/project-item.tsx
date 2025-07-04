@@ -1,6 +1,6 @@
 import React from "react";
 import Collapsible from "react-collapsible";
-import "../../Assets/Assets";
+import "../Assets/Assets";
 
 const ProjectItem = ({
   title,

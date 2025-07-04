@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectItem from "./ProjectItem";
+import ProjectItem from "./project-item";
 import {
   VIDEDU,
   _4UIMG,
@@ -11,7 +11,7 @@ import {
   RENTALS,
   TEMPLATE_CREATOR,
   PROMODRAWER,
-} from "../../Assets/Assets";
+} from "../Assets/Assets";
 
 const Projects = () => {
   return (
