@@ -48,6 +48,10 @@ export const Hero = () => {
             <Button
               variant="outline"
               className="cursor-pointer hover:text-yellow-500"
+              onClick={() => {
+                const section = document.getElementById("experience");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Experience
             </Button>

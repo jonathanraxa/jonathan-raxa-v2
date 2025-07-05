@@ -1,30 +1,30 @@
 // company logos
-import gapinc from "./img/companies/gaplogo.svg";
-import lqdigital from "./img/companies/lq-logo.svg";
-import sfsu from "./img/companies/sfsulogo.png";
-import datarobot from "./datarobot.svg";
-import patientslikeme from "./patients-like-me.svg";
+import gapinc from "@/assets/img/companies/gaplogo.svg";
+import lqdigital from "@/assets/img/companies/lq-logo.svg";
+import sfsu from "@/assets/img/companies/sfsulogo.png";
+import datarobot from "@/assets/img/companies/datarobot.svg";
+import patientslikeme from "@/assets/img/companies/plm.svg";
 
 // personal photos for extra curriculars
-import profile_photo from "./img/me/jonRaxa_edited.jpg";
-import introverted_intellect_profile from "./img/me/logo_with_me_v3.jpg";
-import introverted_intellect_logo from "./img/logo.png";
-import personal_logo from "./img/creative.jpg";
-import sftoastbusters_logo from "./img/TB_LOGOTransparent.png";
+import profile_photo from "@/assets/img/me/jonRaxa_edited.jpg";
+import introverted_intellect_profile from "@/assets/img/me/logo_with_me_v3.jpg";
+import introverted_intellect_logo from "@/assets/img/logo.png";
+import personal_logo from "@/assets/img/creative.jpg";
+import sftoastbusters_logo from "@/assets/img/TB_LOGOTransparent.png";
 
 // portfolio photos
-import videdu from "./img/projects/videdu.jpg";
-import photoworld from "./img/projects/photoworld.jpg";
-import sfpark from "./img/projects/sfpark.jpg";
-import pending from "./img/projects/pending.jpg";
-import script from "./img/projects/script.jpg";
-import mywebsitev2 from "./img/projects/mywebsitev2.jpg";
-import rentals from "./img/projects/rentals.jpg";
-import _4uimg from "./img/projects/fouruimg.jpg";
-import sftoastbusters from "./img/projects/sftoastbusters.jpg";
-import googlescript from "./img/projects/googlescript.jpg";
-import templatecreator from "./img/projects/templatecreator.jpg";
-import promodrawer from "./img/projects/promodrawer.jpg";
+import videdu from "@/assets/img/projects/videdu.jpg";
+import photoworld from "@/assets/img/projects/photoworld.jpg";
+import sfpark from "@/assets/img/projects/sfpark.jpg";
+import pending from "@/assets/img/projects/pending.jpg";
+import script from "@/assets/img/projects/script.jpg";
+import mywebsitev2 from "@/assets/img/projects/mywebsitev2.jpg";
+import rentals from "@/assets/img/projects/rentals.jpg";
+import _4uimg from "@/assets/img/projects/fouruimg.jpg";
+import sftoastbusters from "@/assets/img/projects/sftoastbusters.jpg";
+import googlescript from "@/assets/img/projects/googlescript.jpg";
+import templatecreator from "@/assets/img/projects/templatecreator.jpg";
+import promodrawer from "@/assets/img/projects/promodrawer.jpg";
 
 export const IMAGES = {
   profile_photo: profile_photo,

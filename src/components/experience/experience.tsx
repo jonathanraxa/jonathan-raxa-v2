@@ -5,7 +5,7 @@ import { ExperiencePLM } from "./experience-plm";
 import { ExperienceDataRobot } from "./experience-datarobot";
 
 export const Experience = () => (
-  <div className="flex flex-row justify-between items-center">
+  <div id="experience" className="flex flex-row justify-between items-center">
     <ExperienceSFSU />
     <ExperienceLQDigital />
     <ExperienceGapInc />

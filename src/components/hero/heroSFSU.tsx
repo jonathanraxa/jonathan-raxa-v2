@@ -8,7 +8,10 @@ import pic2 from "@/assets/img/me/me-and-adeline.jpg";
 import { AboutMe } from "@/components/about-me";
 
 import sfsu from "@/assets/img/companies/sfsulogo.png";
-
+// background-image: url(../images/background.jpg);
+// background-repeat: no-repeat;
+// background-size: cover;
+// font-family: Arial, sans-serif;
 export const HeroSFSU = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#2b286e] text-gray-800 dark:text-gray-100">

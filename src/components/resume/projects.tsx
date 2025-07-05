@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectItem from "./project-item";
+import { ProjectItem } from "./project-item";
 import {
   VIDEDU,
   _4UIMG,
@@ -11,9 +11,9 @@ import {
   RENTALS,
   TEMPLATE_CREATOR,
   PROMODRAWER,
-} from "../Assets/Assets";
+} from "./assets";
 
-const Projects = () => {
+export const Projects = () => {
   return (
     <div className="Projects">
       <div className="row no-gutters">
@@ -199,5 +199,3 @@ const Projects = () => {
     </div>
   );
 };
-
-export default Projects;
