@@ -7,12 +7,12 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const Contact = () => {
   return (
-    <div className="flex justify-center flex-col w-full text-center section-title mb-[4rem] mt-[4rem] ">
+    <div className="flex justify-center flex-col w-full text-center section-title mb-[4rem] mt-[4rem]">
       <h2 className="text-4xl mb-5">Contact</h2>
       <p>
         FOR{" "}
-        <span className="text-red-600 font-bold">
-          <i>CAREER INQUIRIES</i>
+        <span className="text-red-600 font-bold uppercase">
+          <i>career inquiries</i>
         </span>
       </p>
       <p>
