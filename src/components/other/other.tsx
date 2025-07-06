@@ -38,12 +38,12 @@ export const Other = () => (
             variant="outline"
             className="cursor-pointer hover:text-yellow-500 mt-10"
           >
-            I was once a super awkward and shy kid
+            About
           </Button>
         </DialogTrigger>
         <DialogContent className="bg-indigo-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100">
           <DialogHeader>
-            <DialogTitle>About me</DialogTitle>
+            <DialogTitle>I was once a super awkward and shy kid</DialogTitle>
           </DialogHeader>
           <DialogDescription>
             <p className="mb-4">I was once a super awkward and shy kid.</p>

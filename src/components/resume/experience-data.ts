@@ -35,6 +35,23 @@ export const sfsuDuties: string = `- Development skills: Drupal CMS, HTML/CSS, J
 - Oversaw and assisted with fixing various website issues using web tools, HTML, and CSS
 - Developed video prototype for instructor/student interaction using JavaScript, jQuery, HTML, and CSS`;
 
+export const sfsuExperienceData = {
+  company: "San Francisco State University",
+  location: "San Francisco, CA",
+  companySummary: "Higher education institution based in San Francisco.",
+  positionSummary:
+    "Assisted faculty with various IT- and website-related issues.",
+  title: "General Information Technology Assistant and Web Content Developer",
+  start: "06/2012",
+  end: "02/2016",
+  duties: [
+    "• Led faculty training in Drupal CMS practices, development, and deployment, allowing staff to update content on the Drupal website.",
+    "• Validated and fixed Drupal websites to ensure proper accessibility requirements for disability, reducing accessibility inconsistencies to comply with A11y standards by 100%.",
+    "• Eliminated 100% of website issues on Drupal sites by overseeing and assisting with fixes using web tools, HTML, and CSS.",
+    "• Developed video prototype for instructor and student interaction using JavaScript, jQuery, HTML, and CSS.",
+  ],
+};
+
 export const allExperiences = [
   {
     company: "DataRobot",
@@ -100,20 +117,5 @@ export const allExperiences = [
       "• Authored a comprehensive user guide for Ruby script featuring step-by-step instructions, annotated screenshots, and terminal code snippets to streamline adoption.",
     ],
   },
-  {
-    company: "San Francisco State University",
-    location: "San Francisco, CA",
-    companySummary: "Higher education institution based in San Francisco.",
-    positionSummary:
-      "Assisted faculty with various IT- and website-related issues.",
-    title: "General Information Technology Assistant and Web Content Developer",
-    start: "06/2012",
-    end: "02/2016",
-    duties: [
-      "• Led faculty training in Drupal CMS practices, development, and deployment, allowing staff to update content on the Drupal website.",
-      "• Validated and fixed Drupal websites to ensure proper accessibility requirements for disability, reducing accessibility inconsistencies to comply with A11y standards by 100%.",
-      "• Eliminated 100% of website issues on Drupal sites by overseeing and assisting with fixes using web tools, HTML, and CSS.",
-      "• Developed video prototype for instructor and student interaction using JavaScript, jQuery, HTML, and CSS.",
-    ],
-  },
+  sfsuExperienceData,
 ];

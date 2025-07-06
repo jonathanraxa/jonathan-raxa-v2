@@ -1,9 +1,11 @@
 import { Contact } from "@/components/evergreen/contact";
-import { HeroSFSU } from "@/components/hero/heroSFSU";
+import { HeroExperience } from "@/components/hero";
+import { sfsuExperienceData } from "@/components/resume/experience-data";
+
 export const SFSUPage = () => {
   return (
     <>
-      <HeroSFSU />
+      <HeroExperience data={sfsuExperienceData} />
       <Contact />
     </>
   );
