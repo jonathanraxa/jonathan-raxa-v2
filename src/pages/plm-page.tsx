@@ -1,15 +1,14 @@
-import { useEffect } from "react";
-
 import { Contact } from "@/components/evergreen/contact";
 import { HeroExperience } from "@/components/hero";
-import { sfsuExperienceData } from "@/components/resume/experience-data";
+import { plmExperienceData } from "@/components/resume/experience-data";
 import { ScrollToTop } from "@/components/helpers/scroll-to-top";
 
-export const SFSUPage = () => {
+export const PLMPage = () => {
   ScrollToTop();
+
   return (
     <>
-      <HeroExperience data={sfsuExperienceData} />
+      <HeroExperience data={plmExperienceData} />
       <Contact />
     </>
   );
