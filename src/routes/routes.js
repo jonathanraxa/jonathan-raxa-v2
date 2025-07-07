@@ -4,6 +4,7 @@ export const routes = {
   lqdigital: "/lqdigital",
   datarobot: "/datarobot",
   plm: "/plm",
+  gapinc: "/gapinc",
   resume: "/resume",
   linkedin: "https://www.linkedin.com/in/jonathanraxa/",
   github: "https://github.com/jonathanraxa",

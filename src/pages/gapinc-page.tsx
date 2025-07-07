@@ -1,12 +1,12 @@
 import { Contact } from "@/components/evergreen/contact";
 import { HeroExperience } from "@/components/hero";
-import { lqExperienceData } from "@/components/resume/experience-data";
+import { gapExperienceData } from "@/components/resume/experience-data";
 import { scrollToTop } from "@/components/helpers/scroll-to-top";
-export const LQDigitalPage = () => {
+export const GapIncPage = () => {
   scrollToTop();
   return (
     <>
-      <HeroExperience data={lqExperienceData} />
+      <HeroExperience data={gapExperienceData} />
       <Contact />
     </>
   );

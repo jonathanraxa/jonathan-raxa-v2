@@ -4,6 +4,7 @@ import { LQDigitalPage } from "./lqdigital-page";
 import { DataRobotPage } from "./datarobot-page";
 import { PLMPage } from "./plm-page";
 import { ResumePage } from "./resume-page";
+import { GapIncPage } from "./gapinc-page";
 
 export {
   HomePage,
@@ -11,5 +12,6 @@ export {
   LQDigitalPage,
   DataRobotPage,
   PLMPage,
+  GapIncPage,
   ResumePage,
 };

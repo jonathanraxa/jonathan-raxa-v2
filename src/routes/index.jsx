@@ -6,6 +6,7 @@ import {
   LQDigitalPage,
   DataRobotPage,
   PLMPage,
+  GapIncPage,
   ResumePage,
 } from "@/pages";
 
@@ -33,5 +34,9 @@ export const router = createBrowserRouter([
   {
     path: "/plm",
     element: <PLMPage />,
+  },
+  {
+    path: "/gapinc",
+    element: <GapIncPage />,
   },
 ]);
