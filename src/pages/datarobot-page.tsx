@@ -3,7 +3,7 @@ import { HeroExperience } from "@/components/hero";
 import { dataRobotExperienceData } from "@/components/resume/experience-data";
 import { scrollToTop } from "@/components/helpers/scroll-to-top";
 export const DataRobotPage = () => {
- scrollToTop();
+  scrollToTop();
   return (
     <>
       <HeroExperience data={dataRobotExperienceData} />

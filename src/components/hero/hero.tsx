@@ -10,10 +10,10 @@ import { AboutMe } from "@/components/about-me";
 export const Hero = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <div className="flex flex-row w-full max-w-5xl">
+      <div className="flex flex-row w-full max-w-7xl">
         <div className="flex-1 flex flex-col justify-center items-start">
           <p>👋 Hi, I'm...</p>
-          <h1 className="text-5xl mt-1">Jonathan (Jon) Raxa</h1>
+          <h1 className="text-6xl mt-1">Jonathan (Jon) Raxa</h1>
           <div className="mt-2 flex content-center justify-center items-center gap-5">
             <div className="text-2xl">Front End Engineer</div>
             <Button
@@ -70,7 +70,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <div className="group relative w-[500px] h-[500px]">
+          <div className="group relative w-[600px] h-[600px]">
             <img
               src={pic}
               alt="Jonathan Raxa"
