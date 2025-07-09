@@ -15,37 +15,34 @@ import bookCover from "@/assets/img/logo/book-cover.jpg";
 
 export const Other = () => (
   <div className="flex justify-evenly w-full items-center py-8">
-    <div className="text-center">
-      <div className="text-center mt-8">
-        <h2 className="text-2xl font-bold">
-          {/* <a href="https://www.amazon.com/dp/B0C5X3Z7YH" target="_blank" rel="noopener noreferrer" className="">
-            
-            </a> */}
-          <Link
-            to={routes.amazon_book}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-500"
-          >
-            An Awkward [Introvert’s] Guide to Human Connection
-          </Link>
-        </h2>
-      </div>
-
+    <div>
+      <h2 className="text-4xl font-bold mt-8">
+        <Link
+          to={routes.amazon_book}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-yellow-500"
+        >
+          An Awkward [Introvert's] Guide to Human Connection
+        </Link>
+      </h2>
       <Dialog>
         <DialogTrigger asChild>
           <Button
             variant="outline"
             className="cursor-pointer hover:text-yellow-500 mt-10"
+            size={"lg"}
           >
             About
           </Button>
         </DialogTrigger>
-        <DialogContent className="bg-indigo-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100">
+        <DialogContent className="bg-indigo-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100 max-h-[80vh] w-[80vw] max-w-[1000px] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>I was once a super awkward and shy kid</DialogTitle>
+            <DialogTitle>
+              An Awkward [Introvert's] Guide to Human Connection
+            </DialogTitle>
           </DialogHeader>
-          <DialogDescription>
+          <DialogDescription className="">
             <p className="mb-4">I was once a super awkward and shy kid.</p>
             <p className="mb-4">
               It became so bad that I was depressed and suicidal. I felt empty
