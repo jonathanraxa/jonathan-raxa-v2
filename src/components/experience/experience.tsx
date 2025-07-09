@@ -11,7 +11,7 @@ import datarobot from "@/assets/img/companies/datarobot.svg";
 export const Experience = () => (
   <div id="experience" className="flex flex-row justify-between items-center">
     <div className="flex-1 p-2 bg-[#2b286e] flex content-center justify-center grayscale hover:grayscale-0">
-      <Button className="w-full max-w-[200px] h-100 object-contain cursor-pointer">
+      <Button className="w-full max-w-[200px] h-80 object-contain cursor-pointer">
         <Link to={routes.sfsu} rel="noopener noreferrer">
           <img
             src={sfsu}
@@ -22,7 +22,7 @@ export const Experience = () => (
       </Button>
     </div>
     <div className="flex-1 p-2 bg-[#d06437] flex content-center justify-center grayscale hover:grayscale-0">
-      <Button className="w-full max-w-[200px] h-100 object-contain cursor-pointer">
+      <Button className="w-full max-w-[200px] h-80 object-contain cursor-pointer">
         <Link to={routes.lqdigital} rel="noopener noreferrer">
           <img
             src={lqdigital}
@@ -33,7 +33,7 @@ export const Experience = () => (
       </Button>
     </div>
     <div className="flex-1 p-2 bg-[#adc9ff] flex content-center justify-center grayscale hover:grayscale-0">
-      <Button className="w-full max-w-[200px] h-100 object-contain cursor-pointer">
+      <Button className="w-full max-w-[200px] h-80 object-contain cursor-pointer">
         <Link to={routes.gapinc} rel="noopener noreferrer">
           <img
             src={gapinc}
@@ -43,8 +43,8 @@ export const Experience = () => (
         </Link>
       </Button>
     </div>
-    <div className="flex-1 p-2 bg-[#F0F0F0] flex content-center justify-center grayscale hover:grayscale-0">
-      <Button className="w-full max-w-[200px] h-100 object-contain cursor-pointer">
+    <div className="flex-1 p-2 bg-[#ffde7c] flex content-center justify-center grayscale hover:grayscale-0">
+      <Button className="w-full max-w-[200px] h-80 object-contain cursor-pointer">
         <Link to={routes.plm} rel="noopener noreferrer">
           <img
             src={plm}
@@ -55,7 +55,7 @@ export const Experience = () => (
       </Button>
     </div>
     <div className="flex-1 p-2 bg-[#81fba5] flex content-center justify-center grayscale hover:grayscale-0">
-      <Button className="w-full max-w-[200px] h-100 object-contain cursor-pointer">
+      <Button className="w-full max-w-[200px] h-80 object-contain cursor-pointer">
         <Link to={routes.datarobot} rel="noopener noreferrer">
           <img
             src={datarobot}

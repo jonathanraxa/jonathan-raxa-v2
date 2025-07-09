@@ -44,7 +44,16 @@ export const Hero = () => {
             </Button>
           </div>
           <div className="flex gap-5 mt-8 content-center justify-between">
-            <AboutMe />
+            <Button
+              variant="outline"
+              className="cursor-pointer hover:text-yellow-500"
+              onClick={() => {
+                const section = document.getElementById("about-me");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              About me
+            </Button>
             <Button
               variant="outline"
               className="cursor-pointer hover:text-yellow-500"

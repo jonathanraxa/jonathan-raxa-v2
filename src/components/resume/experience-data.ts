@@ -95,7 +95,7 @@ export const plmExperienceData = {
     "• Collaborated with hiring managers to conduct design candidate interviews and assess fit against team needs.",
   ],
   companyLogo: plm,
-  backgroundColor: "#F0F0F0",
+  backgroundColor: "#ffde7c",
 };
 export const gapExperienceData = {
   company: "GAP Inc.",
