@@ -17,7 +17,6 @@ export const Hero = () => {
           <div className="mt-2 flex content-center justify-center items-center gap-5">
             <div className="text-2xl">Front End Engineer</div>
             <Button
-              size="lg"
               variant="secondary"
               size="icon"
               className="size-10 cursor-pointer hover:text-yellow-500"
@@ -31,7 +30,6 @@ export const Hero = () => {
               </Link>
             </Button>
             <Button
-              size="lg"
               variant="secondary"
               size="icon"
               className="size-10 cursor-pointer hover:text-yellow-500"
