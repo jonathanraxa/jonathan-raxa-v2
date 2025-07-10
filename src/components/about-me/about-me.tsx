@@ -53,13 +53,13 @@ export const AboutMe = () => (
           expanding my back-end skill set.
         </p>
         <p className="mt-4">
-          <div>
-            🔧 <strong>Tech Stack Highlights:</strong>
-          </div>
-          <br />
+          <strong>Tech Stack Highlights:</strong>
+        </p>
+        <p className="mt-4">
           <strong>Front-End:</strong> React, JavaScript (ES6+), HTML5, CSS3,
           Node.js
-          <br />
+        </p>
+        <p className="mt-4">
           <strong>Testing:</strong> Jest, React Testing Library, Cypress
         </p>
 

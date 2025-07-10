@@ -1,4 +1,4 @@
-import { Contact } from "@/components/evergreen/contact";
+import { Contact } from "@/components/contact/contact";
 import { Hero } from "@/components/hero";
 import { Experience } from "@/components/experience";
 import { Education } from "@/components/education";

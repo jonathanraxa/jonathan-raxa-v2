@@ -2,52 +2,43 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
+  DrawerHeader,
 } from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
 import { HeroExperience } from "@/components/hero";
+import { Contact } from "@/components/contact/contact";
 
 export const ExperienceDrawerItem = (item: any) => {
   return (
     <Drawer>
       <DrawerTrigger
-        className={`w-full flex-1 p-2 flex content-center justify-center grayscale hover:grayscale-0 bg-[${item.backgroundColor}]`}
+        className={`hover:cursor-pointer min-h-[300px] w-full flex-1 p-2 flex items-center justify-center grayscale hover:grayscale-0 bg-[${item.backgroundColor}]`}
       >
         <img
           src={item.companyLogo}
-          alt={`${item.companyName} Logo`}
-          className="w-full max-w-[200px] hover:cursor-pointer"
+          alt={`${item.company} Logo`}
+          className="w-full max-h-[200px] max-w-[200px]"
         />
       </DrawerTrigger>
       <DrawerContent
         className={`z-50 bg-white w-screen min-h-screen bg-[${item.backgroundColor}]`}
       >
-        <DrawerHeader className={`bg-[${item.backgroundColor}]`}>
-          <DrawerClose>
-            <Button
-              className="cursor-pointer hover:text-yellow-500"
-              size="lg"
-              variant="outline"
-            >
-              Close
-            </Button>
+        <div className="flex justify-end">
+          <DrawerClose className="cursor-pointer text-3xl hover:text-yellow-500 pr-[3rem]">
+            X
           </DrawerClose>
-        </DrawerHeader>
-        <HeroExperience data={item} />
+        </div>
+        <HeroExperience
+          data={item}
+          closeButton={
+            <DrawerClose className="cursor-pointer uppercase text-black text-3xl p-4 hover:text-yellow-500 outline mt-[2rem]">
+              Close
+            </DrawerClose>
+          }
+        />
         <DrawerFooter className={`bg-[${item.backgroundColor}]`}>
-          <DrawerClose>
-            <Button
-              className="cursor-pointer hover:text-yellow-500"
-              size="lg"
-              variant="outline"
-            >
-              Close
-            </Button>
-          </DrawerClose>
+          <Contact />
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

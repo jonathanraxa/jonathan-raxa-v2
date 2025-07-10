@@ -57,6 +57,7 @@ export const sfsuExperienceData = {
     "• Developed video prototype for instructor and student interaction using JavaScript, jQuery, HTML, and CSS.",
   ],
   companyLogo: sfsuLogo,
+  backgroundColor: "#2b286e",
 };
 
 export const dataRobotExperienceData = {

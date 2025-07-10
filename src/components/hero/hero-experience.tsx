@@ -1,5 +1,3 @@
-import { BackButton } from "@/components/helpers/back-button";
-
 interface HeroExperienceData {
   start: string;
   end: string;
@@ -13,9 +11,13 @@ interface HeroExperienceData {
 
 interface HeroExperienceProps {
   data: HeroExperienceData;
+  closeButton?: React.ReactNode;
 }
 
-export const HeroExperience: React.FC<HeroExperienceProps> = ({ data }) => {
+export const HeroExperience: React.FC<HeroExperienceProps> = ({
+  data,
+  closeButton,
+}) => {
   const {
     backgroundColor,
     companyLogo,
@@ -33,7 +35,7 @@ export const HeroExperience: React.FC<HeroExperienceProps> = ({ data }) => {
     >
       <div className="w-[1200px] bg-white rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.35)]">
         <div className="h-full p-[5rem]">
-          <div className="flex flex-row items-start justify-start ">
+          <div className="flex flex-row items-start justify-start">
             <div>
               <img
                 src={companyLogo}
@@ -62,6 +64,7 @@ export const HeroExperience: React.FC<HeroExperienceProps> = ({ data }) => {
               </div>
             </div>
           </div>
+          <div className="flex justify-center mt-10">{closeButton}</div>
         </div>
       </div>
     </div>
