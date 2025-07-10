@@ -17,6 +17,7 @@ export const Hero = () => {
           <div className="mt-2 flex content-center justify-center items-center gap-5">
             <div className="text-2xl">Front End Engineer</div>
             <Button
+              size="lg"
               variant="secondary"
               size="icon"
               className="size-10 cursor-pointer hover:text-yellow-500"
@@ -30,6 +31,7 @@ export const Hero = () => {
               </Link>
             </Button>
             <Button
+              size="lg"
               variant="secondary"
               size="icon"
               className="size-10 cursor-pointer hover:text-yellow-500"
@@ -45,6 +47,7 @@ export const Hero = () => {
           </div>
           <div className="flex gap-5 mt-8 content-center justify-between">
             <Button
+              size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500"
               onClick={() => {
@@ -55,6 +58,7 @@ export const Hero = () => {
               About me
             </Button>
             <Button
+              size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500"
               onClick={() => {
@@ -65,6 +69,18 @@ export const Hero = () => {
               Experience
             </Button>
             <Button
+              size="lg"
+              variant="outline"
+              className="cursor-pointer hover:text-yellow-500"
+              onClick={() => {
+                const section = document.getElementById("portfolio");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Portfolio
+            </Button>
+            <Button
+              size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500"
             >

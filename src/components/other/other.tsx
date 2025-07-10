@@ -16,25 +16,47 @@ import bookCover from "@/assets/img/logo/book-cover.jpg";
 export const Other = () => (
   <div className="flex justify-evenly w-full items-center py-8">
     <div>
-      <h2 className="text-4xl font-bold mt-8">
-        <Link
-          to={routes.amazon_book}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-yellow-500"
-        >
-          An Awkward [Introvert's] Guide to Human Connection
-        </Link>
-      </h2>
+      <div className="p-10">
+        <h2 className="text-4xl font-bold mt-8">
+          <Link
+            to={routes.amazon_book}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-yellow-500"
+          >
+            An Awkward [Introvert's] Guide to Human Connection
+          </Link>
+        </h2>
+        <p className="mt-4">
+          One upon a time, one of my life's passion was to help shy people like
+          myself overcome the common fear of social interaction. After many
+          years as a struggling shy person, I realized the problem was how I
+          approached this problem I had. That problem, was to focus on authentic
+          connection. I wrote this book to share my journey and the lessons I
+          learned along the way. The book is available on Amazon, and you can
+          find it{" "}
+          <Link
+            to={routes.amazon_book}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-yellow-500"
+          >
+            here
+          </Link>
+          .
+        </p>
+      </div>
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            className="cursor-pointer hover:text-yellow-500 mt-10"
-            size={"lg"}
-          >
-            About
-          </Button>
+          <div className="px-10">
+            <Button
+              variant="outline"
+              className="cursor-pointer hover:text-yellow-500 mt-10 uppercase"
+              size="lg"
+            >
+              Learn more
+            </Button>
+          </div>
         </DialogTrigger>
         <DialogContent className="bg-indigo-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100 max-h-[80vh] w-[80vw] max-w-[1000px] overflow-y-auto">
           <DialogHeader>
@@ -137,59 +159,8 @@ export const Other = () => (
         </DialogContent>
       </Dialog>
     </div>
-    <div className="text-center">
-      <img className="max-w-[430px] p-16" src={bookCover} alt="SFSU logo" />
+    <div className="text-center pr-[10rem]">
+      <img className="max-w-[430px]" src={bookCover} alt="SFSU logo" />
     </div>
   </div>
 );
-
-{
-  /* <div className="col-md-4">
-<div className="team-item">
-  <a
-  //   href={INTROVERTED_INTELLECT.blog}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <div className="team-image">
-      <img
-        style={customWidthB}
-        className="img-responsive"
-      //   src={IMAGES.introverted_intellect_logo}
-        alt="author"
-      />
-    </div>
-  </a>
-  <div className="team-text">
-    <a
-      // href={INTROVERTED_INTELLECT.blog}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <h3>INTROVERTED INTELLECT</h3>
-    </a>
-    <div className="team-position">
-      Writings from a genuine, bonafide, insecure, awkward introvert.
-    </div>
-    <br />
-    <a
-      // href={INTROVERTED_INTELLECT.blog}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      INTROVERTED INTELLECT
-    </a>
-    <a
-      // href={INTROVERTED_INTELLECT.blog}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <p>
-        As a bonafide introvert my aim is grow out of my comfort-zone and
-        take on the world with confidence, passion, and vision.
-      </p>
-    </a>
-  </div>
-</div>
-</div> */
-}
