@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import pic from "@/assets/img/me/jonathan-raxa.jpg";
 import pic2 from "@/assets/img/me/me-and-adeline.jpg";
-import { AboutMe } from "@/components/about-me";
 
 export const Hero = () => {
   return (

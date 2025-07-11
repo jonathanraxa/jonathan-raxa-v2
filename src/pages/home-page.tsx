@@ -5,6 +5,7 @@ import { Education } from "@/components/education";
 import { AboutMe } from "@/components/about-me";
 import { Other } from "@/components/other";
 import { Portfolio } from "@/components/portfolio";
+import { ScrollToTopButton } from "@/components/helpers/scroll-to-top";
 
 export const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ export const HomePage = () => {
       <Other />
       <Education />
       <Contact />
+      <ScrollToTopButton />
     </>
   );
 };

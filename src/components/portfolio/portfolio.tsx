@@ -1,15 +1,12 @@
-import { PortfolioItem } from "./portfolio-items";
-import { items } from "./portfolio-data";
+import { PortfolioDrawerItem } from "./portfolio-drawer-item";
+import { allPortfolio } from "@/data/portfolio-data";
 
-export const Portfolio = () => {
-  return items.map((item, index) => (
-    <div id="portfolio">
-      <PortfolioItem
-        key={index}
-        projectName={item.projectName}
-        projectDescription={item.projectDescription}
-        backgroundClassNames={item.backgroundClassNames}
-      />
-    </div>
-  ));
-};
+export const Portfolio = () => (
+  <div id="portfolio" className="flex flex-wrap -mx-2">
+    {allPortfolio.map((item, index) => (
+      <div key={`portfolio-${index}`} className="w-1/2">
+        <PortfolioDrawerItem {...item} />
+      </div>
+    ))}
+  </div>
+);

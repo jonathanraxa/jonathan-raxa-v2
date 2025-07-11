@@ -8,7 +8,7 @@ import {
   lqDuties,
   sfsuDuties,
   allExperiences,
-} from "./experience-data";
+} from "../../data/experience-data";
 
 // TODO: We could iterate through these experiences
 

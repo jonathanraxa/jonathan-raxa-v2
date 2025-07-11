@@ -1,22 +1,15 @@
-interface HeroExperienceData {
-  start: string;
-  end: string;
-  company: string;
-  duties: string[];
-  companySummary: string;
-  backgroundColor?: string;
-  positionSummary?: string;
-  companyLogo?: string;
-}
+import { ExperienceDataTypes } from "@/types/index";
 
-interface HeroExperienceProps {
-  data: HeroExperienceData;
+interface ExperienceHeroProps {
+  data: ExperienceDataTypes;
   closeButton?: React.ReactNode;
+  header?: React.ReactNode;
 }
 
-export const HeroExperience: React.FC<HeroExperienceProps> = ({
+export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   data,
   closeButton,
+  header,
 }) => {
   const {
     backgroundColor,
@@ -25,13 +18,13 @@ export const HeroExperience: React.FC<HeroExperienceProps> = ({
     positionSummary,
     start,
     end,
-    companySummary,
     duties,
   } = data;
 
   return (
     <div
-      className={`h-screen flex items-center justify-center bg-[#2b286e] text-gray-800 dark:text-gray-100 bg-[${backgroundColor}]`}
+      style={{ backgroundColor }}
+      className="h-screen flex items-center justify-center bg-[#2b286e] text-gray-800 dark:text-gray-100"
     >
       <div className="w-[1200px] bg-white rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.35)]">
         <div className="h-full p-[5rem]">
@@ -47,16 +40,12 @@ export const HeroExperience: React.FC<HeroExperienceProps> = ({
               <p className="text-black">
                 {start} - {end}
               </p>
-              <h1 className="text-5xl text-black">{company}</h1>
-              <p className="text-md mt-2 text-black">
-                <i>{companySummary}</i>
-              </p>
-
+              {header}
               <div className="mt-10">
                 <div className="mb-5 text-red-600 text-lg">
                   {positionSummary}
                 </div>
-                {duties.map((duty, index) => (
+                {duties?.map((duty, index) => (
                   <p key={index} className="text-black mt-3">
                     {duty}
                   </p>
