@@ -1,40 +1,48 @@
 import React from "react";
+import "./assets";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { PortfolioHeroData } from "@/types";
 
-interface PortfolioHeroProps {
-  data: PortfolioHeroData;
-  closeButton?: React.ReactNode;
-  title?: React.ReactNode;
-  description?: React.ReactNode;
-}
+interface PortfolioHeroProps extends PortfolioHeroData {}
 
-export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
-  data,
-  closeButton,
+export const ProjectItem: React.FC<PortfolioHeroProps> = ({
   title,
   description,
+  website_title,
+  website_link,
+  source_code_title,
+  source_code_link,
+  documentation_title,
+  documentation_link,
+  contribution,
+  languages,
+  date,
+  extra_resource,
+  location,
+  extra_resource_TF,
+  image,
 }) => {
-  const {
-    website_title,
-    website_link,
-    source_code_title,
-    source_code_link,
-    documentation_title,
-    documentation_link,
-    contribution,
-    languages,
-    date,
-    extra_resource,
-    location,
-    extra_resource_TF,
-    image,
-  }: PortfolioHeroData = data;
-
   return (
-    <div className="h-screen flex items-center justify-center bg-black text-gray-800 dark:text-gray-100">
-      <div className="w-[1500px] bg-white rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.35)] p-[5rem]">
-        {title}
-        <div className="flex flex-row">
+    <Collapsible>
+      <CollapsibleTrigger className="cursor-pointer w-full">
+        <div className="flex flex-row w-full">
+          <div className="flex-1 flex justify-start items-center">
+            {date || "N/A"}
+          </div>
+          <div className="flex-1 flex justify-center items-center">
+            <u>{title}</u>
+          </div>
+          <div className="flex-1 flex justify-end items-center">
+            {location || "N/A"}
+          </div>
+        </div>
+      </CollapsibleTrigger>
+      <CollapsibleContent>
+        <div className="flex flex-row mt-[2rem]">
           {/* Left Column: Image */}
           <div className="w-1/2 flex justify-center items-center">
             <img
@@ -121,8 +129,7 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
             )}
           </div>
         </div>
-        <div className="flex justify-center mt-10">{closeButton}</div>
-      </div>
-    </div>
+      </CollapsibleContent>
+    </Collapsible>
   );
 };

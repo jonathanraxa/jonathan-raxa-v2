@@ -1,12 +1,12 @@
 import React from "react";
-import { Experience } from "./experience";
-import { Projects } from "./projects";
-import { Education } from "./education";
-import { Other } from "./other";
-import { Header } from "./header";
-import { Summary } from "./summary";
-import { Skills } from "./skills";
 import { Contact } from "@/components/contact";
+import { Experience } from "./components/experience";
+import { Education } from "./components/education";
+import { Other } from "./components/other";
+import { Header } from "./components/header";
+import { Summary } from "./components/summary";
+import { Skills } from "./components/skills";
+import { Projects } from "./components/projects";
 
 export const Resume = () => {
   return (
@@ -16,6 +16,7 @@ export const Resume = () => {
       <Skills />
       <div className="mt-8">
         <Experience />
+        <Projects />
         <Education />
         <Other />
         <Contact page="resume" />

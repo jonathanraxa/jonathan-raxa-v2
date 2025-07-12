@@ -8,7 +8,7 @@ export const Other = () => (
       <h2 className="uppercase text-2xl font-bold">Other</h2>
     </div>
     <div className="mt-10">
-      <strong>Author</strong>,
+      <strong>Author</strong>,{" "}
       <Link
         to={routes.amazon_book}
         target="_blank"
@@ -16,7 +16,7 @@ export const Other = () => (
         className="hover:text-yellow-500"
       >
         An Awkward [Introvert's] Guide to Human Connection
-      </Link>
+      </Link>{" "}
       (2018)
     </div>
   </div>

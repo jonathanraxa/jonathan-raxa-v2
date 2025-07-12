@@ -6,11 +6,11 @@ import datarobot from "@/assets/img/companies/datarobot.svg";
 import patientslikeme from "@/assets/img/companies/plm.svg";
 
 // personal photos for extra curriculars
-import profile_photo from "@/assets/img/me/jonRaxa_edited.jpg";
+// import profile_photo from "@/assets/img/me/jonRaxa_edited.jpg";
 import introverted_intellect_profile from "@/assets/img/me/logo_with_me_v3.jpg";
-import introverted_intellect_logo from "@/assets/img/logo.png";
-import personal_logo from "@/assets/img/creative.jpg";
-import sftoastbusters_logo from "@/assets/img/TB_LOGOTransparent.png";
+// import introverted_intellect_logo from "@/assets/img/logo.png";
+// import personal_logo from "@/assets/img/creative.jpg";
+// import sftoastbusters_logo from "@/assets/img/TB_LOGOTransparent.png";
 
 // portfolio photos
 import videdu from "@/assets/img/projects/videdu.jpg";
@@ -27,9 +27,9 @@ import templatecreator from "@/assets/img/projects/templatecreator.jpg";
 import promodrawer from "@/assets/img/projects/promodrawer.jpg";
 
 export const IMAGES = {
-  profile_photo: profile_photo,
+  // profile_photo: profile_photo,
   introverted_intellect_profile: introverted_intellect_profile,
-  introverted_intellect_logo: introverted_intellect_logo,
+  // introverted_intellect_logo: introverted_intellect_logo,
   videdu: videdu,
   photoworld: photoworld,
   sfpark: sfpark,
@@ -43,8 +43,8 @@ export const IMAGES = {
   gapinc: gapinc,
   lqdigital: lqdigital,
   sfsu: sfsu,
-  personal_logo: personal_logo,
-  sftoastbusters_logo: sftoastbusters_logo,
+  // personal_logo: personal_logo,
+  // sftoastbusters_logo: sftoastbusters_logo,
   datarobot_logo: datarobot,
   patientslikeme_logo: patientslikeme,
 };
