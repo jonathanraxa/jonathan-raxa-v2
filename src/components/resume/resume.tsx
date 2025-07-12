@@ -1,11 +1,12 @@
 import React from "react";
 import { Experience } from "./experience";
 import { Projects } from "./projects";
-// import {Education} from "./education";
-// import {Personal} from "./personal-other";
+import { Education } from "./education";
+import { Other } from "./other";
 import { Header } from "./header";
 import { Summary } from "./summary";
 import { Skills } from "./skills";
+import { Contact } from "@/components/contact";
 
 export const Resume = () => {
   return (
@@ -15,12 +16,9 @@ export const Resume = () => {
       <Skills />
       <div className="mt-8">
         <Experience />
-        <hr />
-        {/* <Projects /> */}
-        {/* <hr /> */}
-        {/* <Education /> */}
-        {/* <hr /> */}
-        {/* <Personal /> */}
+        <Education />
+        <Other />
+        <Contact page="resume" />
       </div>
     </div>
   );

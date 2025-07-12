@@ -5,10 +5,20 @@ import { routes } from "@/routes/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-export const Contact = () => {
+interface ContactProps {
+  page: string;
+}
+
+export const Contact: React.FC<ContactProps> = ({ page }) => {
   return (
     <div className="flex justify-center flex-col w-full text-center section-title mb-[4rem] mt-[4rem]">
-      <h2 className="text-4xl mb-5">Contact</h2>
+      {page === "resume" ? (
+        <div className="text-center mt-8 mb-8">
+          <h2 className="uppercase text-2xl font-bold">Contact</h2>
+        </div>
+      ) : (
+        <h2 className="text-4xl mb-5">Contact</h2>
+      )}
       <p>
         FOR{" "}
         <span className="text-red-600 font-bold uppercase">
@@ -16,7 +26,7 @@ export const Contact = () => {
         </span>
       </p>
       <p>
-        <strong>Availiable</strong>: Monday to Sunday, 9am - 7pm
+        <strong>Availiable</strong>: Monday to Friday, 9 AM - 5 PM (CST)
       </p>
       <p>
         <strong>Email:</strong>&nbsp;&nbsp;
