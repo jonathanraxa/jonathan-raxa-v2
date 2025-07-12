@@ -10,11 +10,11 @@ import { Projects } from "./components/projects";
 
 export const Resume = () => {
   return (
-    <div className="font-[times new roman] max-w-[1280px] mx-auto p-4">
+    <div className="font-[times new roman] max-w-[1280px] mx-auto p-2 sm:p-4">
       <Header />
       <Summary />
       <Skills />
-      <div className="mt-8">
+      <div className="mt-6 sm:mt-8">
         <Experience />
         <Projects />
         <Education />

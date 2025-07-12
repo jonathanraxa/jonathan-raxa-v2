@@ -52,62 +52,64 @@ export const Experience: React.FC = () => {
   };
 
   return (
-    <div id="experience" className="relative space-y-6">
-      <div className="text-center mt-8">
-        <h2 className="uppercase text-2xl font-bold">Experience</h2>
+    <div id="experience" className="relative space-y-4 sm:space-y-6">
+      <div className="text-center mt-6 sm:mt-8">
+        <h2 className="uppercase text-xl sm:text-2xl font-bold">Experience</h2>
       </div>
 
       {allExperiences.map((exp) => {
         return (
-          <div className="mb-10" key={exp.company}>
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
+          <div className="mb-8 sm:mb-10" key={exp.company}>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
+              <div className="flex flex-row items-center gap-1">
                 <span
                   onClick={() => copyText(exp.company)}
-                  className="uppercase cursor-pointer hover:text-yellow-600 text-center"
+                  className="uppercase cursor-pointer hover:text-yellow-600 text-center transition-colors duration-200"
                 >
-                  <h3 className="text-lg font-bold">{exp.company}</h3>
+                  <h3 className="text-base sm:text-lg font-bold">
+                    {exp.company}
+                  </h3>
                 </span>
                 <span
                   onClick={() => copyText(exp.location)}
-                  className="cursor-pointer hover:text-yellow-600 text-right"
+                  className="cursor-pointer hover:text-yellow-600 text-sm sm:text-base transition-colors duration-200"
                 >
                   {", "}
                   {exp.location}
                 </span>
               </div>
-              <div>
+              <div className="text-center sm:text-right text-sm sm:text-base">
                 <span
-                  className="cursor-pointer hover:text-yellow-600"
+                  className="cursor-pointer hover:text-yellow-600 transition-colors duration-200"
                   onClick={() => copyText("Aug 2021")}
                 >
                   {exp.start}
                 </span>
                 {" - "}
                 <span
-                  className="cursor-pointer hover:text-yellow-600"
+                  className="cursor-pointer hover:text-yellow-600 transition-colors duration-200"
                   onClick={() => copyText("May 2025")}
                 >
                   {exp.end}
                 </span>
               </div>
             </div>
-            <div className="mt-1">
+            <div className="mt-1 text-sm sm:text-base">
               <i>{exp.companySummary}</i>
             </div>
             <div
               onClick={() => copyText("Front-End Software Engineer")}
-              className="cursor-pointer hover:text-yellow-600 bold mt-3"
+              className="cursor-pointer hover:text-yellow-600 bold mt-3 text-sm sm:text-base transition-colors duration-200"
             >
               <strong>{exp.title}</strong>
             </div>
-            <div>{exp.positionSummary}</div>
+            <div className="text-sm sm:text-base">{exp.positionSummary}</div>
             <div>
-              <ul>
+              <ul className="space-y-1 sm:space-y-2">
                 {exp.duties.map((duty, index) => (
                   <li
                     key={index}
-                    className="mt-2 ml-4 cursor-pointer hover:text-yellow-600"
+                    className="mt-2 ml-4 cursor-pointer hover:text-yellow-600 text-sm sm:text-base leading-relaxed transition-colors duration-200"
                     onClick={() => copyText(duty)}
                   >
                     {duty}
@@ -122,7 +124,7 @@ export const Experience: React.FC = () => {
       {copySuccess && (
         <Button
           onClick={() => setCopySuccess(false)}
-          className="bg-black text-white text-lg py-2 px-4 rounded flex justify-center items-center mx-auto my-2 opacity-70"
+          className="bg-black text-white text-base sm:text-lg py-2 px-4 rounded flex justify-center items-center mx-auto my-2 opacity-70 transition-opacity duration-200"
         >
           Copied!
         </Button>
