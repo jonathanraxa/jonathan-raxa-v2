@@ -22,7 +22,7 @@ export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
   const { backgroundColor, title, positionSummary, companyLogo, company } =
     data;
   return (
-    <Drawer>
+    <Drawer shouldScaleBackground={false}>
       <DrawerTrigger
         style={{ backgroundColor }}
         className="hover:cursor-pointer min-h-[200px] sm:min-h-[300px] w-full flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
@@ -34,8 +34,13 @@ export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
         />
       </DrawerTrigger>
       <DrawerContent
-        style={{ backgroundColor }}
-        className="z-50 bg-white w-screen min-h-screen max-h-screen overflow-y-auto"
+        style={{
+          backgroundColor,
+          height: "100vh",
+          maxHeight: "100vh",
+          minHeight: "100vh",
+        }}
+        className="z-50 bg-white w-screen flex flex-col overflow-hidden"
       >
         <div className="flex justify-end p-4">
           <DrawerClose className="cursor-pointer text-2xl sm:text-3xl hover:text-yellow-500 transition-colors duration-200">

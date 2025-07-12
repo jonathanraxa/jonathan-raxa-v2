@@ -24,10 +24,10 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   return (
     <div
       style={{ backgroundColor }}
-      className="min-h-screen flex items-center justify-center bg-[#2b286e] text-gray-800 dark:text-gray-100 p-4"
+      className="flex-1 flex items-center justify-center bg-[#2b286e] text-gray-800 dark:text-gray-100 p-4 min-h-0 overflow-auto"
     >
       <div className="w-full max-w-[1200px] bg-white rounded-[25px] sm:rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.35)]">
-        <div className="h-full p-[2rem] sm:p-[3rem] md:p-[5rem]">
+        <div className="p-[2rem] sm:p-[3rem] md:p-[5rem]">
           <div className="flex flex-col sm:flex-row items-start justify-start gap-6 sm:gap-8">
             <div className="w-full sm:w-auto flex justify-center sm:justify-start">
               <img
