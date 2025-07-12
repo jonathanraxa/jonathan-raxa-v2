@@ -8,41 +8,45 @@ import pic2 from "@/assets/img/me/me-and-adeline.jpg";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <div className="flex flex-row w-full max-w-7xl">
-        <div className="flex-1 flex flex-col justify-center items-start">
-          <p>👋 Hi, I'm...</p>
-          <h1 className="text-6xl mt-1">Jonathan (Jon) Raxa</h1>
-          <div className="mt-2 flex content-center justify-center items-center gap-5">
-            <div className="text-2xl">Front End Engineer</div>
-            <Button
-              variant="secondary"
-              size="icon"
-              className="size-10 cursor-pointer hover:text-yellow-500"
-            >
-              <Link
-                to={routes.github}
-                target="_blank"
-                rel="noopener noreferrer"
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-4">
+      <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-8 lg:gap-0">
+        <div className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+          <p className="text-lg lg:text-xl">👋 Hi, I'm...</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl mt-1 font-bold">
+            Jonathan (Jon) Raxa
+          </h1>
+          <div className="mt-2 flex flex-col sm:flex-row content-center justify-center items-center gap-3 sm:gap-5">
+            <div className="text-xl sm:text-2xl">Front End Engineer</div>
+            <div className="flex gap-3">
+              <Button
+                variant="secondary"
+                size="icon"
+                className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
               >
-                <FontAwesomeIcon icon={faGithub} />
-              </Link>
-            </Button>
-            <Button
-              variant="secondary"
-              size="icon"
-              className="size-10 cursor-pointer hover:text-yellow-500"
-            >
-              <Link
-                to={routes.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
+                <Link
+                  to={routes.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </Link>
+              </Button>
+              <Button
+                variant="secondary"
+                size="icon"
+                className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
               >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </Link>
-            </Button>
+                <Link
+                  to={routes.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </Link>
+              </Button>
+            </div>
           </div>
-          <div className="flex gap-5 mt-8 content-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mt-8 content-center justify-center lg:justify-start">
             <Button
               size="lg"
               variant="outline"
@@ -92,7 +96,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <div className="group relative w-[600px] h-[600px]">
+          <div className="group relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px]">
             <img
               src={pic}
               alt="Jonathan Raxa"
