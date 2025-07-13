@@ -66,8 +66,12 @@ export const AboutMe = () => (
             <strong>Front-End:</strong> React, JavaScript (ES6+), HTML5, CSS3,
             Node.js
           </p>
-          <p>
+          <p className="mb-2">
             <strong>Testing:</strong> Jest, React Testing Library, Cypress
+          </p>
+          <p className="mb-2">
+            <strong>Personal projects:</strong> React, TypeScript, Tailwind CSS,
+            Shadcn UI, Material UI, Node.js, Express, MongoDB, Vite, Firebase
           </p>
         </div>
 

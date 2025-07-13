@@ -8,7 +8,7 @@ import pic2 from "@/assets/img/me/me-and-adeline.jpg";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-4 pt-16 sm:pt-0">
       <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-8 lg:gap-0">
         <div className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           <p className="text-lg lg:text-xl">👋 Hi, I'm...</p>
@@ -50,7 +50,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="cursor-pointer hover:text-yellow-500"
+              className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
               onClick={() => {
                 const section = document.getElementById("about-me");
                 section?.scrollIntoView({ behavior: "smooth" });
@@ -61,7 +61,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="cursor-pointer hover:text-yellow-500"
+              className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
               onClick={() => {
                 const section = document.getElementById("experience");
                 section?.scrollIntoView({ behavior: "smooth" });
@@ -72,7 +72,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="cursor-pointer hover:text-yellow-500"
+              className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
               onClick={() => {
                 const section = document.getElementById("portfolio");
                 section?.scrollIntoView({ behavior: "smooth" });
@@ -83,7 +83,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="cursor-pointer hover:text-yellow-500"
+              className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
             >
               <Link
                 to={routes.resume}

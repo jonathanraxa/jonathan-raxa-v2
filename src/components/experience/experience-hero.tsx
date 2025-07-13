@@ -24,11 +24,11 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   return (
     <div
       style={{ backgroundColor }}
-      className="flex-1 flex items-center justify-center bg-[#2b286e] text-gray-800 dark:text-gray-100 p-4 min-h-0 overflow-auto"
+      className="flex items-start justify-center text-gray-800 dark:text-gray-100 p-4"
     >
       <div className="w-full max-w-[1200px] bg-white rounded-[25px] sm:rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.35)]">
-        <div className="p-[2rem] sm:p-[3rem] md:p-[5rem]">
-          <div className="flex flex-col sm:flex-row items-start justify-start gap-6 sm:gap-8">
+        <div className="p-4 sm:p-[3rem] md:p-[5rem]">
+          <div className="flex flex-col sm:flex-row items-start justify-start gap-4 sm:gap-6 md:gap-8">
             <div className="w-full sm:w-auto flex justify-center sm:justify-start">
               <img
                 src={companyLogo}
@@ -41,7 +41,7 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
                 {start} - {end}
               </p>
               {header}
-              <div className="mt-6 sm:mt-10 w-full">
+              <div className="mt-4 sm:mt-6 md:mt-10 w-full">
                 <div className="mb-3 sm:mb-5 text-red-600 text-base sm:text-lg font-medium">
                   {positionSummary}
                 </div>
@@ -58,7 +58,9 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-6 sm:mt-10">{closeButton}</div>
+          <div className="flex justify-center mt-4 sm:mt-6 md:mt-10">
+            {closeButton}
+          </div>
         </div>
       </div>
     </div>

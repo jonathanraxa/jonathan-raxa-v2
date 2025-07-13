@@ -31,7 +31,7 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
   }: PortfolioHeroData = data;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-gray-800 dark:text-gray-100 p-4">
+    <div className="flex items-start justify-center bg-black text-gray-800 dark:text-gray-100 p-4">
       <div className="w-full max-w-[1500px] bg-white rounded-[25px] sm:rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.35)] p-[2rem] sm:p-[3rem] lg:p-[5rem]">
         {title}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
