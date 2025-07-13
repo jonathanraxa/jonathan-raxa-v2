@@ -58,7 +58,7 @@ export const Other = () => (
             </Button>
           </div>
         </DialogTrigger>
-        <DialogContent className="bg-indigo-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100 max-h-[80vh] w-[95vw] lg:w-[80vw] max-w-[1000px] overflow-y-auto p-4 lg:p-6">
+        <DialogContent className="bg-indigo-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 max-h-[80vh] w-[95vw] lg:w-[80vw] max-w-[1000px] overflow-y-auto p-4 lg:p-6">
           <DialogHeader>
             <DialogTitle className="text-lg sm:text-xl lg:text-2xl">
               An Awkward [Introvert's] Guide to Human Connection
@@ -159,7 +159,7 @@ export const Other = () => (
         </DialogContent>
       </Dialog>
     </div>
-    <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+    <div className="w-full lg:w-1/2 flex justify-center lg:justify-center">
       <img
         className="max-w-[300px] sm:max-w-[350px] lg:max-w-[430px] w-full h-auto object-contain"
         src={bookCover}

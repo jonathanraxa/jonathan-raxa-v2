@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import pic from "@/assets/img/me/jonathan-raxa.jpg";
 import pic2 from "@/assets/img/me/me-and-adeline.jpg";
 
@@ -109,6 +110,29 @@ export const Hero = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* Scroll Arrow */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="size-12 sm:size-14 cursor-pointer hover:text-yellow-500 transition-all duration-300 hover:scale-110"
+          onClick={() => {
+            const section = document.getElementById("about-me");
+            section?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-sm sm:text-base">About me</div>
+            <div>
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="text-2xl sm:text-3xl"
+              />
+            </div>
+          </div>
+        </Button>
       </div>
     </div>
   );
