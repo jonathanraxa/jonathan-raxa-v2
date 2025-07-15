@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 interface ContactProps {
-  page: string;
+  page?: string;
 }
 
 export const Contact: React.FC<ContactProps> = ({ page }) => {
