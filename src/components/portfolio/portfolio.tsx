@@ -3,7 +3,7 @@ import { allPortfolio } from "@/data/portfolio-data";
 
 export const Portfolio = () => (
   <>
-    <div className="my-8" text-center>
+    <div className="my-20 text-center">
       <h2 className="uppercase text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
         Portfolio Projects
       </h2>

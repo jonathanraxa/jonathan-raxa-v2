@@ -31,7 +31,6 @@ export const GitHubProjects = () => {
     try {
       setLoading(true);
       setError(null);
-      // Replace 'jonathanraxa' with your GitHub username
       const response = await fetch(
         "https://api.github.com/users/jonathanraxa/repos?sort=updated&per_page=20",
       );
@@ -42,7 +41,6 @@ export const GitHubProjects = () => {
 
       const data: GitHubRepo[] = await response.json();
 
-      // Filter out forked repositories and sort by stars
       const filteredRepos = data
         .filter((repo) => !repo.fork)
         .sort(
@@ -69,7 +67,7 @@ export const GitHubProjects = () => {
 
   return (
     <div className="w-full p-6 bg-gray-600/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
-      <div>
+      <div className="mt-10">
         <h2 className="uppercase text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white">
           GitHub Projects
         </h2>
