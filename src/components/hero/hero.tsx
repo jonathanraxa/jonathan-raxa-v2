@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faDev,
+} from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import pic from "@/assets/img/me/jonathan-raxa.jpg";
 import pic2 from "@/assets/img/me/me-and-adeline.jpg";
@@ -43,6 +47,19 @@ export const Hero = () => {
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
+                </Link>
+              </Button>
+              <Button
+                variant="secondary"
+                size="icon"
+                className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
+              >
+                <Link
+                  to={routes.devto}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faDev} />
                 </Link>
               </Button>
             </div>
