@@ -3,7 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faStar, faCodeBranch, faEye } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faCodeBranch,
+  faEye,
+  faExternalLinkAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface GitHubRepo {
   id: number;
@@ -65,6 +70,28 @@ export const GitHubProjects = () => {
     });
   };
 
+  // Function to check if homepage URL is a GitHub Pages URL
+  const isGitHubPagesUrl = (url: string | null): boolean => {
+    if (!url) return false;
+    return (
+      url.includes("github.io") ||
+      url.includes("pages.dev") ||
+      url.includes("vercel.app") ||
+      url.includes("netlify.app")
+    );
+  };
+
+  // Function to get GitHub Pages URL (either from homepage or construct it)
+  const getGitHubPagesUrl = (repo: GitHubRepo): string | undefined => {
+    // If homepage exists and looks like a GitHub Pages URL, use it
+    if (repo.homepage && isGitHubPagesUrl(repo.homepage)) {
+      return repo.homepage;
+    }
+
+    // Otherwise, construct the standard GitHub Pages URL
+    // return `https://jonathanraxa.github.io/${repo.name}`;
+  };
+
   return (
     <div className="w-full p-6 bg-gray-600/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
       <div className="mt-10">
@@ -124,115 +151,141 @@ export const GitHubProjects = () => {
       {showRepos && repos.length > 0 && (
         <div className="space-y-4">
           <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {repos.map((repo) => (
-              <Card
-                key={repo.id}
-                className="hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
-              >
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon
-                        icon={faGithub}
-                        className="text-lg text-white"
-                      />
-                      <CardTitle className="text-base font-bold truncate text-gray-800 dark:text-gray-100">
-                        {repo.name}
-                      </CardTitle>
+            {repos.map((repo) => {
+              const githubPagesUrl = getGitHubPagesUrl(repo);
+              const hasGitHubPages =
+                githubPagesUrl &&
+                (repo.homepage || isGitHubPagesUrl(githubPagesUrl));
+
+              return (
+                <Card
+                  key={repo.id}
+                  className="hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 flex flex-col h-full"
+                >
+                  <CardHeader className="pb-3 flex-shrink-0">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <FontAwesomeIcon
+                          icon={faGithub}
+                          className="text-lg text-white"
+                        />
+                        <CardTitle className="text-base font-bold truncate text-gray-800 dark:text-gray-100">
+                          {repo.name}
+                        </CardTitle>
+                      </div>
+                      {repo.language && (
+                        <span className="px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
+                          {repo.language}
+                        </span>
+                      )}
                     </div>
-                    {repo.language && (
-                      <span className="px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                        {repo.language}
-                      </span>
+                  </CardHeader>
+                  <CardContent className="pt-0 flex-1 flex flex-col">
+                    {repo.description && (
+                      <p className="text-gray-600 dark:text-gray-200 text-sm mb-3 line-clamp-2 flex-shrink-0">
+                        {repo.description}
+                      </p>
                     )}
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  {repo.description && (
-                    <p className="text-gray-600 dark:text-gray-200 text-sm mb-3 line-clamp-2">
-                      {repo.description}
-                    </p>
-                  )}
 
-                  {/* Stats */}
-                  <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-300 mb-3">
-                    <div className="flex items-center gap-1">
-                      <FontAwesomeIcon
-                        icon={faStar}
-                        className="text-yellow-500"
-                      />
-                      <span className="font-medium">
-                        {repo.stargazers_count}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <FontAwesomeIcon
-                        icon={faCodeBranch}
-                        className="text-blue-500"
-                      />
-                      <span className="font-medium">{repo.forks_count}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <FontAwesomeIcon
-                        icon={faEye}
-                        className="text-green-500"
-                      />
-                      <span className="font-medium">{repo.watchers_count}</span>
-                    </div>
-                  </div>
-
-                  {/* Topics */}
-                  {repo.topics && repo.topics.length > 0 && (
-                    <div className="mb-3">
-                      <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-200 mb-2">
-                        Technologies
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {repo.topics.slice(0, 3).map((topic, index) => (
-                          <span
-                            key={index}
-                            className="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full"
-                          >
-                            {topic}
-                          </span>
-                        ))}
-                        {repo.topics.length > 3 && (
-                          <span className="px-2 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
-                            +{repo.topics.length - 3} more
-                          </span>
-                        )}
+                    {/* Stats */}
+                    <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-300 mb-3 flex-shrink-0">
+                      <div className="flex items-center gap-1">
+                        <FontAwesomeIcon
+                          icon={faStar}
+                          className="text-yellow-500"
+                        />
+                        <span className="font-medium">
+                          {repo.stargazers_count}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <FontAwesomeIcon
+                          icon={faCodeBranch}
+                          className="text-blue-500"
+                        />
+                        <span className="font-medium">{repo.forks_count}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <FontAwesomeIcon
+                          icon={faEye}
+                          className="text-green-500"
+                        />
+                        <span className="font-medium">
+                          {repo.watchers_count}
+                        </span>
                       </div>
                     </div>
-                  )}
 
-                  {/* Dates */}
-                  <div className="text-xs text-gray-500 dark:text-gray-300 mb-3">
-                    <div className="mb-1">
-                      <span className="font-medium">Created:</span>{" "}
-                      {formatDate(repo.created_at)}
-                    </div>
-                    <div>
-                      <span className="font-medium">Updated:</span>{" "}
-                      {formatDate(repo.updated_at)}
-                    </div>
-                  </div>
+                    {/* Topics */}
+                    {repo.topics && repo.topics.length > 0 && (
+                      <div className="mb-3 flex-shrink-0">
+                        <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-200 mb-2">
+                          Technologies
+                        </h4>
+                        <div className="flex flex-wrap gap-1">
+                          {repo.topics.slice(0, 3).map((topic, index) => (
+                            <span
+                              key={index}
+                              className="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full"
+                            >
+                              {topic}
+                            </span>
+                          ))}
+                          {repo.topics.length > 3 && (
+                            <span className="px-2 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+                              +{repo.topics.length - 3} more
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    )}
 
-                  {/* Action Button */}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full hover:bg-yellow-500 hover:text-white hover:border-yellow-500 transition-all duration-300 cursor-pointer text-white"
-                    onClick={() => window.open(repo.html_url, "_blank")}
-                  >
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      className="mr-1 text-white"
-                    />
-                    View on GitHub
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                    {/* Dates */}
+                    <div className="text-xs text-gray-500 dark:text-gray-300 mb-3 flex-shrink-0">
+                      <div className="mb-1">
+                        <span className="font-medium">Created:</span>{" "}
+                        {formatDate(repo.created_at)}
+                      </div>
+                      <div>
+                        <span className="font-medium">Updated:</span>{" "}
+                        {formatDate(repo.updated_at)}
+                      </div>
+                    </div>
+
+                    {/* Action Buttons - Always at bottom */}
+                    <div className="space-y-2 mt-auto pt-3 flex-shrink-0">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full hover:bg-yellow-500 hover:text-white hover:border-yellow-500 transition-all duration-300 cursor-pointer text-white"
+                        onClick={() => window.open(repo.html_url, "_blank")}
+                      >
+                        <FontAwesomeIcon
+                          icon={faGithub}
+                          className="mr-1 text-white"
+                        />
+                        View on GitHub
+                      </Button>
+
+                      {hasGitHubPages && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300 cursor-pointer text-white"
+                          onClick={() => window.open(githubPagesUrl, "_blank")}
+                        >
+                          <FontAwesomeIcon
+                            icon={faExternalLinkAlt}
+                            className="mr-1 text-white"
+                          />
+                          Live Demo
+                        </Button>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       )}
