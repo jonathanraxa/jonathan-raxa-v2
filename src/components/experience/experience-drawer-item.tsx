@@ -18,22 +18,19 @@ export interface ExperienceDrawerItemProps {
 export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
   data,
 }) => {
-  const {
-    backgroundColor,
-    positionSummary,
-    companyLogo,
-    company,
-    title,
-    start,
-    end,
-  } = data;
+  const { backgroundColor, companyLogo, company, title, start, end } = data;
+  // Black or white text, whichever reads better on the company color
+  const textOnColor = isDarkColor(backgroundColor)
+    ? "text-white"
+    : "text-gray-900";
+
   return (
     <Drawer shouldScaleBackground={true}>
       <DrawerTrigger
         style={{ backgroundColor }}
         className={cn(
           "group hover:cursor-pointer min-h-[200px] sm:min-h-[300px] w-full flex flex-col items-center justify-start gap-4 px-4 py-10 text-center grayscale hover:grayscale-0 transition-all duration-300",
-          isDarkColor(backgroundColor) ? "text-white" : "text-gray-900",
+          textOnColor,
         )}
       >
         <div className="flex h-[120px] sm:h-[150px] w-full items-center justify-center">
@@ -65,7 +62,12 @@ export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
       >
         <div className="flex-1 overflow-y-auto">
           <div className="flex justify-end px-5 pt-4 flex-shrink-0">
-            <DrawerClose className="cursor-pointer text-xl sm:text-2xl md:text-3xl hover:text-yellow-500 transition-colors duration-200 z-10">
+            <DrawerClose
+              className={cn(
+                "cursor-pointer text-xl sm:text-2xl md:text-3xl hover:text-yellow-500 transition-colors duration-200 z-10",
+                textOnColor,
+              )}
+            >
               X
             </DrawerClose>
           </div>
@@ -76,8 +78,8 @@ export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
                 <DrawerTitle className="text-2xl sm:text-4xl md:text-5xl text-black font-bold leading-tight">
                   {company}
                 </DrawerTitle>
-                <DrawerDescription className="text-sm sm:text-md mt-2 text-black">
-                  <i>{positionSummary}</i>
+                <DrawerDescription className="text-base sm:text-lg mt-2 font-semibold text-gray-700">
+                  {title}
                 </DrawerDescription>
               </>
             }
@@ -87,7 +89,7 @@ export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
               </DrawerClose>
             }
           />
-          <div style={{ backgroundColor }} className="p-4">
+          <div style={{ backgroundColor }} className={cn("p-4", textOnColor)}>
             <Contact page="experience" />
           </div>
         </div>

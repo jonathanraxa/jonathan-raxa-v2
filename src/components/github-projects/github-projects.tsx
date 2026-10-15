@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,20 +24,26 @@ interface GitHubRepo {
   updated_at: string;
   topics: string[];
   fork: boolean;
+  archived: boolean;
+  pushed_at: string;
 }
+
+const GITHUB_USER = "jonathanraxa";
+const INITIAL_COUNT = 6;
 
 export const GitHubProjects = () => {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showRepos, setShowRepos] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const fetchGitHubRepos = async () => {
     try {
       setLoading(true);
       setError(null);
       const response = await fetch(
-        "https://api.github.com/users/jonathanraxa/repos?sort=updated&per_page=20",
+        `https://api.github.com/users/${GITHUB_USER}/repos?sort=pushed&per_page=100`,
       );
 
       if (!response.ok) {
@@ -46,21 +52,41 @@ export const GitHubProjects = () => {
 
       const data: GitHubRepo[] = await response.json();
 
+      // Most recently worked-on first; skip forks and archived repos
       const filteredRepos = data
-        .filter((repo) => !repo.fork)
+        .filter((repo) => !repo.fork && !repo.archived)
         .sort(
           (a, b) =>
-            new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
+            new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime(),
         );
 
       setRepos(filteredRepos);
-      setShowRepos(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
       setLoading(false);
     }
   };
+
+  // Load repos once the section scrolls near the viewport
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          fetchGitHubRepos();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  const visibleRepos = showAll ? repos : repos.slice(0, INITIAL_COUNT);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-US", {
@@ -93,65 +119,45 @@ export const GitHubProjects = () => {
   };
 
   return (
-    <div className="w-full p-6 bg-gray-600/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
-      <div className="mt-10">
+    <section
+      ref={sectionRef}
+      className="w-full p-6 pb-14 bg-gray-600/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
+    >
+      <div className="mt-10 mb-8">
         <h2 className="uppercase text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white">
           GitHub Projects
         </h2>
         <p className="text-base sm:text-lg text-center mt-2 text-white">
-          My latest public repositories from GitHub
+          What I've been working on lately
         </p>
       </div>
 
-      {/* Fixed Button Container */}
-      <div className="text-center py-3 min-h-[120px] flex items-center justify-center">
-        {!showRepos && !loading && !error && (
+      {loading && (
+        <div className="flex min-h-[200px] flex-col items-center justify-center space-y-2">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-500"></div>
+          <p className="text-sm text-gray-200">Loading GitHub projects...</p>
+        </div>
+      )}
+
+      {error && (
+        <div className="flex min-h-[200px] flex-col items-center justify-center text-center">
+          <p className="text-red-300 mb-3">
+            Couldn't load projects from GitHub.
+          </p>
           <Button
             onClick={fetchGitHubRepos}
-            className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg font-medium transition-colors duration-300"
-          >
-            <FontAwesomeIcon icon={faGithub} className="mr-2" />
-            Show My GitHub Projects
-          </Button>
-        )}
-
-        {loading && (
-          <div className="flex flex-col items-center space-y-2">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
-              Loading GitHub projects...
-            </p>
-          </div>
-        )}
-
-        {error && (
-          <div className="text-center">
-            <p className="text-red-500 mb-2">Error loading projects: {error}</p>
-            <Button
-              onClick={fetchGitHubRepos}
-              variant="outline"
-              className="hover:text-yellow-500 text-white"
-            >
-              Try Again
-            </Button>
-          </div>
-        )}
-
-        {showRepos && repos.length > 0 && (
-          <Button
-            onClick={() => setShowRepos(false)}
             variant="outline"
-            className="hover:text-yellow-500 hover:border-yellow-500 transition-colors duration-300 text-white"
+            className="hover:text-yellow-500 text-white"
           >
-            Hide Projects
+            Try Again
           </Button>
-        )}
-      </div>
+        </div>
+      )}
 
-      {showRepos && repos.length > 0 && (
-        <div className="space-y-4">
+      {!loading && !error && repos.length > 0 && (
+        <div className="mx-auto max-w-7xl space-y-4">
           <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {repos.map((repo) => {
+            {visibleRepos.map((repo) => {
               const githubPagesUrl = getGitHubPagesUrl(repo);
               const hasGitHubPages =
                 githubPagesUrl &&
@@ -287,8 +293,29 @@ export const GitHubProjects = () => {
               );
             })}
           </div>
+          <div className="flex flex-col items-center justify-center gap-4 pt-6 sm:flex-row">
+            {repos.length > INITIAL_COUNT && (
+              <Button
+                onClick={() => setShowAll((show) => !show)}
+                className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-lg font-semibold transition-colors duration-300"
+              >
+                {showAll
+                  ? "Show fewer"
+                  : `Show all ${repos.length} repositories`}
+              </Button>
+            )}
+            <a
+              href={`https://github.com/${GITHUB_USER}?tab=repositories`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-white hover:text-yellow-500 transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faGithub} className="mr-2" />
+              View my GitHub profile →
+            </a>
+          </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
