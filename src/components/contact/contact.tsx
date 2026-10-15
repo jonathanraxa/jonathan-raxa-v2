@@ -22,7 +22,7 @@ export const Contact: React.FC<ContactProps> = ({ page }) => {
         </span>
       </p>
       <p>
-        <strong>Availiable</strong>: Monday to Friday, 9 AM - 5 PM (CST)
+        <strong>Available</strong>: Monday to Friday, 9 AM - 5 PM (CST)
       </p>
       <p>
         <strong>Email:</strong>&nbsp;&nbsp;

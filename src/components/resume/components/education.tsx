@@ -7,7 +7,7 @@ export const Education = () => (
     </div>
     <div className="mt-8 sm:mt-10 space-y-4 sm:space-y-6 text-sm sm:text-base leading-relaxed">
       <div>
-        <strong>Bachelors of Science (BS)</strong>, Computer Science,{" "}
+        <strong>Bachelor of Science (BS)</strong>, Computer Science,{" "}
         <u className="underline uppercase">San Francisco State University</u>,
         San Francisco, CA
       </div>

@@ -3,6 +3,7 @@ import family from "@/assets/img/me/family.jpeg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
+import { webDevYears, reactYears } from "@/data/experience-data";
 import { scrollToSection } from "@/lib/utils";
 import { SocialLinks } from "@/components/helpers/social-links";
 
@@ -38,10 +39,10 @@ export const AboutMe = () => (
           pursue a degree in computer science.
         </p>
         <p>
-          All of that has led to an accumulation of about 9 years of experience
-          in web development and 5 years creating React applications in diverse
-          industries such as A.I., digital marketing, higher education, and the
-          social networking space.
+          All of that has led to an accumulation of about {webDevYears} years of
+          experience in web development and {reactYears} years creating React
+          applications in diverse industries such as A.I., digital marketing,
+          higher education, and the social networking space.
         </p>
         <p>
           I've also acquired experience with web accessibility, testing tools

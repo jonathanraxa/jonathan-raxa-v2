@@ -28,10 +28,10 @@ export const Other = () => (
           </Link>
         </h2>
         <p className="mt-4 text-sm sm:text-base leading-relaxed">
-          One upon a time, one of my life's passion was to help shy people like
-          myself overcome the common fear of social interaction. After many
+          Once upon a time, one of my life's passions was to help shy people
+          like myself overcome the common fear of social interaction. After many
           years as a struggling shy person, I realized the problem was how I
-          approached this problem I had. That problem, was to focus on authentic
+          approached this problem I had. That problem was to focus on authentic
           connection. I wrote this book to share my journey and the lessons I
           learned along the way. The book is available on Amazon, and you can
           find it{" "}
@@ -85,7 +85,7 @@ export const Other = () => (
               tips. Most of it isn't (though there are plenty of tips).
             </p>
             <p>
-              <strong>BONUS:</strong> There are FREE tips and a tricks guide
+              <strong>BONUS:</strong> There is a FREE tips and tricks guide
               inside the book within the first few pages if you so desire.
             </p>
             <p>

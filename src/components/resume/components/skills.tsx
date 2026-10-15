@@ -1,3 +1,5 @@
+import { reactYears } from "@/data/experience-data";
+
 export const Skills = () => {
   return (
     <div>
@@ -6,9 +8,9 @@ export const Skills = () => {
       </div>
       <ul className="list-disc list-inside mt-4 space-y-2 sm:space-y-3 text-sm sm:text-base leading-relaxed">
         <li>
-          <span className="font-semibold">Frontend Engineering</span>: Five
-          years of professionally building out web applications using React JS,
-          Ruby on Rails, and various frontend technologies.
+          <span className="font-semibold">Frontend Engineering</span>:{" "}
+          {reactYears} years of professionally building out web applications
+          using React JS, Ruby on Rails, and various frontend technologies.
         </li>
         <li>
           <span className="font-semibold">Software Testing</span>: Designed and
