@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Apply dark: styles from the "dark" class on <html> (not the visitor's OS setting),
+   so everyone sees the same mix of light and dark sections */
+@custom-variant dark (&:is(.dark *));
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
