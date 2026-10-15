@@ -36,7 +36,7 @@ export const VIDEDU: ProjectData = {
 
 export const TEMPLATE_CREATOR: ProjectData = {
   title: "SFCC Template Creator",
-  description: "html/css generator for sfcc template code",
+  description: "HTML/CSS generator for SFCC template code.",
   websiteTitle: "SFCC Template Creator (hosted on github pages)",
   websiteLink: "https://jonathanraxa.github.io/template_creator/",
   sourceCodeTitle: "Template Creator Source Code",
@@ -55,7 +55,7 @@ export const TEMPLATE_CREATOR: ProjectData = {
 export const _4UIMG: ProjectData = {
   title: "4UImg",
   description:
-    "4UImg provides CII and its Artists an online storefront for reaching customers more efficiently  and expanding business.",
+    "4UImg provides CII and its Artists an online storefront for reaching customers more efficiently and expanding business.",
   websiteTitle: "www.sfsuswe.com/s16g04/",
   websiteLink:
     "www.sfsuswe.com/s16g04/ (Unfortunately the server is down so the website is NOT live)",
@@ -76,7 +76,7 @@ export const _4UIMG: ProjectData = {
 export const PHOTOWORLD: ProjectData = {
   title: "PhotoWorld",
   description:
-    "Google maps photo search application.User looks for a public photo using Flickr API and pins drop respective to photo geo - location.",
+    "Google maps photo search application. User looks for a public photo using the Flickr API, and pins drop at the photo's geolocation.",
   websiteTitle: "www.photoglobe.space",
   websiteLink: "http://photoglobe.space/",
   sourceCodeTitle: "PhotoWorld Source Code",
@@ -88,7 +88,7 @@ export const PHOTOWORLD: ProjectData = {
     "JavaScript/JQuery",
     "HTML/CSS",
     "Google Maps API",
-    "Flicker API",
+    "Flickr API",
   ],
   date: "Feb 2015 – Apr 2015",
   extraResource: "",
@@ -120,7 +120,7 @@ export const SFPARK: ProjectData = {
 export const RUBYSCRIPT: ProjectData = {
   title: "LQ Digital Ruby Script",
   description:
-    "Three Ruby scripts used for specfic HTML pages to find and replace certain values pertained only to the website.",
+    "Three Ruby scripts used for specific HTML pages to find and replace certain values pertained only to the website.",
   websiteTitle: "",
   websiteLink: "",
   sourceCodeTitle: "LQ Digital Ruby Script Source Code",
@@ -131,7 +131,7 @@ export const RUBYSCRIPT: ProjectData = {
   languages: ["Ruby"],
   date: "Mar 2016",
   extraResource: "",
-  location: "LQ Digial",
+  location: "LQ Digital",
   showExtraResource: false,
   image: script,
 };
@@ -192,7 +192,7 @@ export const RENTALS: ProjectData = {
 
 export const PROMODRAWER: ProjectData = {
   title: "SFCC Promo Drawer",
-  description: "React JS based web application for promo drawer generatinon",
+  description: "React JS based web application for promo drawer generation.",
   websiteTitle: "SFCC Promo Drawer [heroku app]",
   websiteLink: "http://sfccpromodrawer.herokuapp.com",
   sourceCodeTitle: "Promo Drawer",
@@ -203,7 +203,7 @@ export const PROMODRAWER: ProjectData = {
   languages: ["React JS", "JavaScript/JQuery", "HTML/CSS"],
   date: "Aug 2019",
   extraResource: "",
-  location: "San Francisco, CA | Gap Inc.",
+  location: "Gap Inc. | San Francisco, CA",
   showExtraResource: false,
   image: promodrawer,
 };
@@ -219,4 +219,14 @@ export const allPortfolio: ProjectData[] = [
   GOOGLESCRIPT,
   RENTALS,
   PROMODRAWER,
+];
+
+// Shown first on the home page; the rest appear under "Show all projects"
+export const featuredPortfolio: ProjectData[] = [
+  PROMODRAWER,
+  TEMPLATE_CREATOR,
+  GOOGLESCRIPT,
+  RUBYSCRIPT,
+  VIDEDU,
+  PHOTOWORLD,
 ];

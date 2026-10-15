@@ -7,29 +7,14 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { PortfolioHero } from "./portfolio-hero";
+import { ProjectCard } from "./project-card";
 import { ProjectData } from "@/types";
 
 export const PortfolioDrawerItem = (item: ProjectData) => {
   return (
     <Drawer>
-      <DrawerTrigger className="group block min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] w-full relative overflow-hidden cursor-pointer transition-all duration-300">
-        <img
-          loading="lazy"
-          src={item.image}
-          alt={`${item.title} project image`}
-          className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:brightness-20"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-6 lg:p-[3rem] bg-black bg-opacity-50">
-          <h2 className="text-white text-lg sm:text-xl lg:text-2xl font-bold text-center leading-tight">
-            {item.title}
-          </h2>
-          <p className="text-white text-xs sm:text-sm mt-2 text-center">
-            {item.description}
-          </p>
-          <p className="text-white text-xs sm:text-sm mt-2 text-center">
-            <span className="font-bold">Lang:</span> {item.languages.join(", ")}
-          </p>
-        </div>
+      <DrawerTrigger className="group block h-full w-full cursor-pointer rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-500">
+        <ProjectCard project={item} />
       </DrawerTrigger>
       <DrawerContent
         style={{
