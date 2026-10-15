@@ -9,6 +9,7 @@ import {
 import { ExperienceHero } from "@/components/experience";
 import { Contact } from "@/components/contact/contact";
 import { ExperienceData } from "@/types/index";
+import { cn, isDarkColor } from "@/lib/utils";
 
 export interface ExperienceDrawerItemProps {
   data: ExperienceData;
@@ -17,19 +18,41 @@ export interface ExperienceDrawerItemProps {
 export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
   data,
 }) => {
-  const { backgroundColor, positionSummary, companyLogo, company } = data;
+  const {
+    backgroundColor,
+    positionSummary,
+    companyLogo,
+    company,
+    title,
+    start,
+    end,
+  } = data;
   return (
     <Drawer shouldScaleBackground={true}>
       <DrawerTrigger
         style={{ backgroundColor }}
-        className="hover:cursor-pointer min-h-[200px] sm:min-h-[300px] w-full flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
+        className={cn(
+          "group hover:cursor-pointer min-h-[200px] sm:min-h-[300px] w-full flex flex-col items-center justify-start gap-4 px-4 py-10 text-center grayscale hover:grayscale-0 transition-all duration-300",
+          isDarkColor(backgroundColor) ? "text-white" : "text-gray-900",
+        )}
       >
-        <img
-          loading="lazy"
-          src={companyLogo}
-          alt={`${company} Logo`}
-          className="w-full max-h-[150px] sm:max-h-[200px] max-w-[150px] sm:max-w-[200px] object-contain"
-        />
+        <div className="flex h-[120px] sm:h-[150px] w-full items-center justify-center">
+          <img
+            loading="lazy"
+            src={companyLogo}
+            alt={`${company} Logo`}
+            className="max-h-full w-full max-w-[150px] sm:max-w-[180px] object-contain"
+          />
+        </div>
+        <div>
+          <p className="font-bold leading-snug">{title}</p>
+          <p className="mt-1 text-sm opacity-80">
+            {start} – {end}
+          </p>
+          <p className="mt-3 text-sm font-semibold underline-offset-4 group-hover:underline">
+            View details →
+          </p>
+        </div>
       </DrawerTrigger>
       <DrawerContent
         style={{

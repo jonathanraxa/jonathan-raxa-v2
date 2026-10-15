@@ -19,8 +19,8 @@ export const sfsuExperienceData: ExperienceData = {
   positionSummary:
     "Assisted faculty with various IT- and website-related issues.",
   title: "General Information Technology Assistant and Web Content Developer",
-  start: "06/2012",
-  end: "02/2016",
+  start: "Jun 2012",
+  end: "Feb 2016",
   duties: [
     "• Led faculty training in Drupal CMS practices, development, and deployment, allowing staff to update content on the Drupal website.",
     "• Validated and fixed Drupal websites to ensure proper accessibility requirements for disability, reducing accessibility inconsistencies to comply with A11y standards by 100%.",
@@ -77,8 +77,8 @@ export const gapExperienceData: ExperienceData = {
   positionSummary:
     "Drove customer engagement and sales growth by launching bi-monthly marketing campaigns leveraging HTML and CSS, promoting collaboration among stakeholders.",
   title: "Frontend Web Content Developer",
-  start: "09/2016",
-  end: "11/2020",
+  start: "Sep 2016",
+  end: "Nov 2020",
   duties: [
     "• Achieved a 50% increase in work productivity through the development of a small React-based promo and message generator application that leverages HTML and CSS for Salesforce CMS, promoting effective collaboration.",
     "• Pioneered a new front-end Salesforce CMS (SFCC) process and site templating utilizing HTML and CSS for Gap EU/UK, streamlining content management efficiency by 50%.",
@@ -95,8 +95,8 @@ export const lqExperienceData: ExperienceData = {
   positionSummary:
     "Produced and redesigned various websites for new promotions using HTML and CSS, allowing for a more robust and aesthetically pleasing user experience.",
   title: "Frontend Web Content Developer",
-  start: "02/2016",
-  end: "09/2016",
+  start: "Feb 2016",
+  end: "Sep 2016",
   duties: [
     "• Developed Ruby script to simplify content workflow from four hours to 15 minutes, delivering an increase in productivity.",
     "• Authored a comprehensive user guide for Ruby script featuring step-by-step instructions, annotated screenshots, and terminal code snippets to streamline adoption.",

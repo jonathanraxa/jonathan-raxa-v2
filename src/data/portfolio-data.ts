@@ -84,12 +84,7 @@ export const PHOTOWORLD: ProjectData = {
   documentationTitle: "PhotoGlobe Documentation",
   documentationLink: "https://github.com/jonathanraxa/PhotoWorld",
   contribution: "Tech-Lead. Designed and developed entire application",
-  languages: [
-    "JavaScript/JQuery",
-    "HTML/CSS",
-    "Google Maps API",
-    "Flickr API",
-  ],
+  languages: ["JavaScript/JQuery", "HTML/CSS", "Google Maps API", "Flickr API"],
   date: "Feb 2015 – Apr 2015",
   extraResource: "",
   location: "SFSU",
