@@ -15,7 +15,8 @@ import promodrawer from "@/assets/img/projects/promodrawer.jpg";
 // portfolio objects
 export const VIDEDU: ProjectData = {
   title: "VidEdu",
-  description: "YouTube play/pause note-taking interaction.",
+  description:
+    "Note-taking web app built around YouTube play/pause interaction; served as project and team lead.",
   websiteTitle: "www.videdu.org",
   websiteLink: "http://www.videdu.org",
   sourceCodeTitle: "VidEdu Source Code",
@@ -27,7 +28,7 @@ export const VIDEDU: ProjectData = {
   contribution:
     "Project/Team Lead. Main Application Designer. Front-end. Back-end.",
   languages: ["Ruby", "Ruby on Rails", "JavaScript/JQuery", "HTML/CSS"],
-  date: "Sep 2015 - Present",
+  date: "Sep 2015 – Present",
   extraResource: "https://player.vimeo.com/video/193198836",
   location: "SFSU",
   showExtraResource: true,
@@ -36,7 +37,8 @@ export const VIDEDU: ProjectData = {
 
 export const TEMPLATE_CREATOR: ProjectData = {
   title: "SFCC Template Creator",
-  description: "HTML/CSS generator for SFCC template code.",
+  description:
+    "HTML/CSS generator for Salesforce Commerce Cloud (SFCC) template code.",
   websiteTitle: "SFCC Template Creator (hosted on github pages)",
   websiteLink: "https://jonathanraxa.github.io/template_creator/",
   sourceCodeTitle: "Template Creator Source Code",
@@ -45,7 +47,7 @@ export const TEMPLATE_CREATOR: ProjectData = {
   documentationLink: "",
   contribution: "Everything",
   languages: ["REACT JS", "JavaScript/JQuery (ES6/Babel)", "HTML/CSS"],
-  date: "May 2019 - June 2019",
+  date: "May 2019 – June 2019",
   extraResource: "",
   location: "Gap Inc. | San Francisco, CA",
   showExtraResource: false,
@@ -76,7 +78,7 @@ export const _4UIMG: ProjectData = {
 export const PHOTOWORLD: ProjectData = {
   title: "PhotoWorld",
   description:
-    "Google maps photo search application. User looks for a public photo using the Flickr API, and pins drop at the photo's geolocation.",
+    "Google Maps photo search app: find public Flickr photos and see pins dropped at each photo's geolocation. Tech lead; designed and developed the entire application.",
   websiteTitle: "www.photoglobe.space",
   websiteLink: "http://photoglobe.space/",
   sourceCodeTitle: "PhotoWorld Source Code",
@@ -115,7 +117,7 @@ export const SFPARK: ProjectData = {
 export const RUBYSCRIPT: ProjectData = {
   title: "LQ Digital Ruby Script",
   description:
-    "Three Ruby scripts used for specific HTML pages to find and replace certain values pertained only to the website.",
+    "Ruby scripts that find and replace values across a website's HTML files, cutting a content workflow from four hours to 15 minutes.",
   websiteTitle: "",
   websiteLink: "",
   sourceCodeTitle: "LQ Digital Ruby Script Source Code",
@@ -151,7 +153,8 @@ export const PERSONALWEBSITE: ProjectData = {
 
 export const GOOGLESCRIPT: ProjectData = {
   title: "Promotional Templates",
-  description: "Using Google Scripts to create HTML templates",
+  description:
+    "Google Apps Script that generates HTML/CSS promo templates from Google Docs, letting project managers skip developer requests and raising productivity by 50%.",
   websiteTitle: "Gap Inc. Europe",
   websiteLink: "www.gap.eu",
   sourceCodeTitle: "",
@@ -187,7 +190,8 @@ export const RENTALS: ProjectData = {
 
 export const PROMODRAWER: ProjectData = {
   title: "SFCC Promo Drawer",
-  description: "React JS based web application for promo drawer generation.",
+  description:
+    "React app that generates promo drawer and message HTML/CSS for Salesforce Commerce Cloud, increasing team productivity by 50%.",
   websiteTitle: "SFCC Promo Drawer [heroku app]",
   websiteLink: "http://sfccpromodrawer.herokuapp.com",
   sourceCodeTitle: "Promo Drawer",
@@ -224,4 +228,12 @@ export const featuredPortfolio: ProjectData[] = [
   RUBYSCRIPT,
   VIDEDU,
   PHOTOWORLD,
+];
+
+// "Notable Projects" on the resume
+export const resumePortfolio: ProjectData[] = [
+  PROMODRAWER,
+  TEMPLATE_CREATOR,
+  VIDEDU,
+  RUBYSCRIPT,
 ];
