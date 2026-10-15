@@ -10,6 +10,7 @@ import { ScrollToTopButton } from "@/components/helpers/scroll-to-top";
 import { Reveal } from "@/components/helpers/reveal";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
+import { Writing } from "@/components/writing";
 
 export const HomePage = () => {
   return (
@@ -27,6 +28,9 @@ export const HomePage = () => {
       </Reveal>
       <Reveal>
         <GitHubProjects />
+      </Reveal>
+      <Reveal>
+        <Writing />
       </Reveal>
       <Reveal>
         <Education />
