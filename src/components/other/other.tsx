@@ -161,6 +161,7 @@ export const Other = () => (
     </div>
     <div className="w-full lg:w-1/2 flex justify-center lg:justify-center">
       <img
+        loading="lazy"
         className="max-w-[300px] sm:max-w-[350px] lg:max-w-[430px] w-full h-auto object-contain"
         src={bookCover}
         alt="Book cover for An Awkward Introvert's Guide to Human Connection"

@@ -28,6 +28,7 @@ export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
         className="hover:cursor-pointer min-h-[200px] sm:min-h-[300px] w-full flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
       >
         <img
+          loading="lazy"
           src={companyLogo}
           alt={`${company} Logo`}
           className="w-full max-h-[150px] sm:max-h-[200px] max-w-[150px] sm:max-w-[200px] object-contain"

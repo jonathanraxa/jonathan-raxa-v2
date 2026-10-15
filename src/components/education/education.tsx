@@ -5,6 +5,7 @@ export const Education = () => (
   <div className="bg-[#25236e] flex flex-col lg:flex-row justify-evenly w-full items-center py-4 lg:py-8 px-4 lg:px-8 gap-6 lg:gap-8">
     <div className="w-full lg:w-1/2 flex justify-center">
       <img
+        loading="lazy"
         className="max-w-[250px] sm:max-w-[300px] lg:max-w-[430px] w-full h-auto object-contain p-4 lg:p-16"
         src={sfsuLogo}
         alt="San Francisco State University logo"

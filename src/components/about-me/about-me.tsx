@@ -14,6 +14,7 @@ export const AboutMe = () => (
     <div className="w-full lg:w-1/2 mb-6 lg:mb-0 lg:pr-8">
       <div className="w-full h-full object-cover rounded-lg overflow-hidden">
         <img
+          loading="lazy"
           className="w-full h-auto object-cover"
           src={family}
           alt="picture of family"

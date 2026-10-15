@@ -13,6 +13,7 @@ export const PortfolioDrawerItem = (item: any) => {
     <Drawer>
       <DrawerTrigger className="group block min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] w-full relative overflow-hidden cursor-pointer transition-all duration-300">
         <img
+          loading="lazy"
           src={item.image}
           alt={`${item.title} project image`}
           className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:brightness-20"
