@@ -1,93 +1,14 @@
-// title={TEMPLATE_CREATOR.title}
-//     description={TEMPLATE_CREATOR.description}
-//     website_title={TEMPLATE_CREATOR.website_title}
-//     website_link={TEMPLATE_CREATOR.website_link}
-//     source_code_title={TEMPLATE_CREATOR.source_code_title}
-//     source_code_link={TEMPLATE_CREATOR.source_code_link}
-//     documentation_title={TEMPLATE_CREATOR.documentation_title}
-//     documentation_link={TEMPLATE_CREATOR.documentation_link}
-//     contribution={TEMPLATE_CREATOR.contribution}
-//     languages={TEMPLATE_CREATOR.languages}
-//     date={TEMPLATE_CREATOR.date}
-//     extra_resource={TEMPLATE_CREATOR.extra_resource}
-//     location={TEMPLATE_CREATOR.location}
-//     extra_resource_TF={TEMPLATE_CREATOR.extra_resource_TF}
-//     image={TEMPLATE_CREATOR.image}
-
-// company logos
-import gapinc from "@/assets/img/companies/gaplogo.svg";
-import lqdigital from "@/assets/img/companies/lq-logo.svg";
-import sfsu from "@/assets/img/companies/sfsulogo.png";
-import datarobot from "@/assets/img/companies/datarobot.svg";
-import patientslikeme from "@/assets/img/companies/patients-like-me.svg";
-
-// personal photos for extra curriculars
-// import profile_photo from "../../img/me/jonRaxa_edited.jpg";
-// import introverted_intellect_profile from "../../img/me/logo_with_me_v3.jpg";
-// import introverted_intellect_logo from "../../img/logo.png";
-// import personal_logo from "../../img/creative.jpg";
-// import sftoastbusters_logo from "../../img/TB_LOGOTransparent.png";
-
 // portfolio photos
 import videdu from "@/assets/img/projects/videdu.jpg";
 import photoworld from "@/assets/img/projects/photoworld.jpg";
 import sfpark from "@/assets/img/projects/sfpark.jpg";
-import pending from "@/assets/img/projects/pending.jpg";
 import script from "@/assets/img/projects/script.jpg";
 import mywebsitev2 from "@/assets/img/projects/mywebsitev2.jpg";
 import rentals from "@/assets/img/projects/rentals.jpg";
 import _4uimg from "@/assets/img/projects/fouruimg.jpg";
-import sftoastbusters from "@/assets/img/projects/sftoastbusters.jpg";
 import googlescript from "@/assets/img/projects/googlescript.jpg";
 import templatecreator from "@/assets/img/projects/templatecreator.jpg";
 import promodrawer from "@/assets/img/projects/promodrawer.jpg";
-
-export const IMAGES = {
-  //   profile_photo: profile_photo,
-  //   introverted_intellect_profile: introverted_intellect_profile,
-  //   introverted_intellect_logo: introverted_intellect_logo,
-  //   personal_logo: personal_logo,
-  //   sftoastbusters_logo: sftoastbusters_logo,
-  videdu: videdu,
-  photoworld: photoworld,
-  sfpark: sfpark,
-  pending: pending,
-  script: script,
-  mywebsitev2: mywebsitev2,
-  rentals: rentals,
-  sftoastbusters: sftoastbusters,
-  googlescript: googlescript,
-  promodrawer: promodrawer,
-  gapinc: gapinc,
-  lqdigital: lqdigital,
-  sfsu: sfsu,
-  datarobot_logo: datarobot,
-  patientslikeme_logo: patientslikeme,
-};
-
-// links
-export const INTROVERTED_INTELLECT = {
-  blog: "https://www.introvertedintellect.com/",
-  itunes: "https://itunes.apple.com/us/podcast/introverted-intellect/",
-  googleplay:
-    "https://play.google.com/music/m/Ilnnraw74lyasmqzpwlarz7g74y?t=Introverted_Intellect",
-  stitcher: "https://www.stitcher.com/s?fid=226748&refid=stpr",
-};
-export const SF_TOASTBUSTERS = {
-  website: "sftoastbusters.com",
-  videoawared:
-    "https://d4tm.org/index.php/district-awards/public-relations-award-recipients.html",
-};
-
-export const PERSONAL_LINKS = {
-  linkedin: "https://www.linkedin.com/in/jonathanraxa",
-  facebook: "https://www.facebook.com/jraxa",
-  github: "https://github.com/jonathanraxa",
-  twitter: "https://twitter.com/jonathanraxa",
-  devto: "https://dev.to/jonraxa",
-  wordpress: "http://introvertedintellect.com/",
-  medium: "https://medium.com/@jonathanraxa",
-};
 
 // portfolio objects
 export const VIDEDU = {
@@ -298,16 +219,3 @@ export const allPortfolio = [
   RENTALS,
   PROMODRAWER,
 ];
-
-// backgroundClassNames:
-//       "grayscale hover:grayscale-0 bg-indigo-100 dark:bg-indigo-900 shadow-md hover:bg-indigo-200 dark:hover:bg-indigo-800",
-// backgroundClassNames:
-//       "grayscale hover:grayscale-0 bg-teal-100 dark:bg-teal-900 shadow-md hover:bg-teal-200 dark:hover:bg-teal-800",
-// backgroundClassNames:
-//       "grayscale hover:grayscale-0 bg-amber-100 dark:bg-amber-900 shadow-md hover:bg-amber-200 dark:hover:bg-amber-800",
-// backgroundClassNames:
-//       "grayscale hover:grayscale-0 bg-purple-100 dark:bg-purple-900 shadow-md hover:bg-purple-200 dark:hover:bg-purple-800",
-// backgroundClassNames:
-//       "grayscale hover:grayscale-0 bg-pink-100 dark:bg-pink-900 shadow-md hover:bg-pink-200 dark:hover:bg-pink-800",
-// backgroundClassNames:
-//       "grayscale hover:grayscale-0 bg-orange-100 dark:bg-orange-900 shadow-md hover:bg-orange-200 dark:hover:bg-orange-800",
