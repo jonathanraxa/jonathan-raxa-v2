@@ -1,4 +1,3 @@
-import React from "react";
 import family from "@/assets/img/me/family.jpeg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";

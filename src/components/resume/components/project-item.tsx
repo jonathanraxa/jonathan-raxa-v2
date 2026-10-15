@@ -4,12 +4,10 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { PortfolioHeroData } from "@/types";
+import { ProjectData } from "@/types";
 import { ProjectDetails } from "@/components/helpers/project-details";
 
-interface PortfolioHeroProps extends PortfolioHeroData {}
-
-export const ProjectItem: React.FC<PortfolioHeroProps> = (props) => {
+export const ProjectItem: React.FC<ProjectData> = (props) => {
   const { title, description, date, location, image } = props;
   const [isClicked, setIsClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);

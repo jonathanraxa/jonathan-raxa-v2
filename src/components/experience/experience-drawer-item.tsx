@@ -2,25 +2,22 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerFooter,
   DrawerTrigger,
   DrawerTitle,
-  DrawerHeader,
   DrawerDescription,
 } from "@/components/ui/drawer";
 import { ExperienceHero } from "@/components/experience";
 import { Contact } from "@/components/contact/contact";
-import { ExperienceDataTypes } from "@/types/index";
+import { ExperienceData } from "@/types/index";
 
 export interface ExperienceDrawerItemProps {
-  data: ExperienceDataTypes;
+  data: ExperienceData;
 }
 
 export const ExperienceDrawerItem: React.FC<ExperienceDrawerItemProps> = ({
   data,
 }) => {
-  const { backgroundColor, title, positionSummary, companyLogo, company } =
-    data;
+  const { backgroundColor, positionSummary, companyLogo, company } = data;
   return (
     <Drawer shouldScaleBackground={true}>
       <DrawerTrigger

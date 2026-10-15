@@ -1,9 +1,9 @@
 import React from "react";
-import { PortfolioHeroData } from "@/types";
+import { ProjectData } from "@/types";
 import { cn } from "@/lib/utils";
 
 interface ProjectDetailsProps {
-  data: PortfolioHeroData;
+  data: ProjectData;
   className?: string;
 }
 
@@ -39,18 +39,18 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   className,
 }) => {
   const {
-    website_title,
-    website_link,
-    source_code_title,
-    source_code_link,
-    documentation_title,
-    documentation_link,
+    websiteTitle,
+    websiteLink,
+    sourceCodeTitle,
+    sourceCodeLink,
+    documentationTitle,
+    documentationLink,
     contribution,
     languages,
     date,
-    extra_resource,
+    extraResource,
     location,
-    extra_resource_TF,
+    showExtraResource,
   } = data;
 
   const rowClassName = cn("text-sm sm:text-base", className);
@@ -72,34 +72,34 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           <span className="font-bold">Contribution:</span> {contribution}
         </p>
       )}
-      {website_link && (
+      {websiteLink && (
         <DetailLink
           label="Website"
-          href={website_link}
-          text={website_title}
+          href={websiteLink}
+          text={websiteTitle}
           className={rowClassName}
         />
       )}
-      {source_code_link && (
+      {sourceCodeLink && (
         <DetailLink
           label="Source Code"
-          href={source_code_link}
-          text={source_code_title}
+          href={sourceCodeLink}
+          text={sourceCodeTitle}
           className={rowClassName}
         />
       )}
-      {documentation_link && (
+      {documentationLink && (
         <DetailLink
           label="Documentation"
-          href={documentation_link}
-          text={documentation_title}
+          href={documentationLink}
+          text={documentationTitle}
           className={rowClassName}
         />
       )}
-      {extra_resource_TF && extra_resource && (
+      {showExtraResource && extraResource && (
         <DetailLink
           label="Extra Resource"
-          href={extra_resource}
+          href={extraResource}
           className={rowClassName}
         />
       )}

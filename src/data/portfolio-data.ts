@@ -1,3 +1,5 @@
+import { ProjectData } from "@/types";
+
 // portfolio photos
 import videdu from "@/assets/img/projects/videdu.jpg";
 import photoworld from "@/assets/img/projects/photoworld.jpg";
@@ -11,77 +13,76 @@ import templatecreator from "@/assets/img/projects/templatecreator.jpg";
 import promodrawer from "@/assets/img/projects/promodrawer.jpg";
 
 // portfolio objects
-export const VIDEDU = {
+export const VIDEDU: ProjectData = {
   title: "VidEdu",
   description: "YouTube play/pause note-taking interaction.",
-  website_title: "www.videdu.org",
-  website_link: "http://www.videdu.org",
-  source_code_title: "VidEdu Source Code",
-  source_code_link:
+  websiteTitle: "www.videdu.org",
+  websiteLink: "http://www.videdu.org",
+  sourceCodeTitle: "VidEdu Source Code",
+  sourceCodeLink:
     "https://docs.google.com/document/d/16lotARoZ2KsIzn06sAM0vDntKwQaTTYQFjGzJO3iamU/edit?usp=sharing",
-  documentation_title: "VidEdu Documentation",
-  documentation_link:
+  documentationTitle: "VidEdu Documentation",
+  documentationLink:
     "https://docs.google.com/document/d/16lotARoZ2KsIzn06sAM0vDntKwQaTTYQFjGzJO3iamU/edit?usp=sharing",
   contribution:
     "Project/Team Lead. Main Application Designer. Front-end. Back-end.",
   languages: ["Ruby", "Ruby on Rails", "JavaScript/JQuery", "HTML/CSS"],
   date: "Sep 2015 - Present",
-  extra_resource: "https://player.vimeo.com/video/193198836",
+  extraResource: "https://player.vimeo.com/video/193198836",
   location: "SFSU",
-  extra_resource_TF: true,
+  showExtraResource: true,
   image: videdu,
 };
 
-export const TEMPLATE_CREATOR = {
+export const TEMPLATE_CREATOR: ProjectData = {
   title: "SFCC Template Creator",
   description: "html/css generator for sfcc template code",
-  website_title: "SFCC Template Creator (hosted on github pages)",
-  website_link: "https://jonathanraxa.github.io/template_creator/",
-  source_code_title: "Template Creator Source Code",
-  source_code_link: "https://github.com/jonathanraxa/template_creator",
-  documentation_title: "",
-  documentation_link: "",
+  websiteTitle: "SFCC Template Creator (hosted on github pages)",
+  websiteLink: "https://jonathanraxa.github.io/template_creator/",
+  sourceCodeTitle: "Template Creator Source Code",
+  sourceCodeLink: "https://github.com/jonathanraxa/template_creator",
+  documentationTitle: "",
+  documentationLink: "",
   contribution: "Everything",
   languages: ["REACT JS", "JavaScript/JQuery (ES6/Babel)", "HTML/CSS"],
   date: "May 2019 - June 2019",
-  extra_resource: "",
+  extraResource: "",
   location: "Gap Inc. | San Francisco, CA",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: templatecreator,
 };
 
-export const _4UIMG = {
+export const _4UIMG: ProjectData = {
   title: "4UImg",
   description:
     "4UImg provides CII and its Artists an online storefront for reaching customers more efficiently  and expanding business.",
-  website_title: "www.sfsuswe.com/s16g04/",
-  website_link:
+  websiteTitle: "www.sfsuswe.com/s16g04/",
+  websiteLink:
     "www.sfsuswe.com/s16g04/ (Unfortunately the server is down so the website is NOT live)",
-  source_code_title: "4Uimg Source Code",
-  source_code_link:
-    "https://github.com/jonathanraxa/4Uimg/blob/master/index.php",
-  documentation_title: "4Uimg Documentation",
-  documentation_link:
+  sourceCodeTitle: "4Uimg Source Code",
+  sourceCodeLink: "https://github.com/jonathanraxa/4Uimg/blob/master/index.php",
+  documentationTitle: "4Uimg Documentation",
+  documentationLink:
     "https://docs.google.com/document/d/1wR2uDwZn4haisS-8htjyZCgW5mHDu0cFbI5LwKrgKYg/edit",
   contribution: "Tech-Lead. Designed and in charge of most Front-end UI",
   languages: ["PHP", "MySQL", "JavaScript/JQuery", "HTML/CSS"],
   date: "Feb 2016 – May 2016",
-  extra_resource: "",
+  extraResource: "",
   location: "SFSU",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: _4uimg,
 };
 
-export const PHOTOWORLD = {
+export const PHOTOWORLD: ProjectData = {
   title: "PhotoWorld",
   description:
     "Google maps photo search application.User looks for a public photo using Flickr API and pins drop respective to photo geo - location.",
-  website_title: "www.photoglobe.space",
-  website_link: "http://photoglobe.space/",
-  source_code_title: "PhotoWorld Source Code",
-  source_code_link: "https://github.com/jonathanraxa/PhotoWorld",
-  documentation_title: "PhotoGlobe Documentation",
-  documentation_link: "https://github.com/jonathanraxa/PhotoWorld",
+  websiteTitle: "www.photoglobe.space",
+  websiteLink: "http://photoglobe.space/",
+  sourceCodeTitle: "PhotoWorld Source Code",
+  sourceCodeLink: "https://github.com/jonathanraxa/PhotoWorld",
+  documentationTitle: "PhotoGlobe Documentation",
+  documentationLink: "https://github.com/jonathanraxa/PhotoWorld",
   contribution: "Tech-Lead. Designed and developed entire application",
   languages: [
     "JavaScript/JQuery",
@@ -90,124 +91,124 @@ export const PHOTOWORLD = {
     "Flicker API",
   ],
   date: "Feb 2015 – Apr 2015",
-  extra_resource: "",
+  extraResource: "",
   location: "SFSU",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: photoworld,
 };
 
-export const SFPARK = {
+export const SFPARK: ProjectData = {
   title: "SF Park",
   description:
     "ParkSF is an Android based application for mobile devices that allows users to interact with parking locations throughout San Francisco.",
-  website_title: "",
-  website_link: "",
-  source_code_title: "Park SF Source Code",
-  source_code_link: "https://github.com/jonathanraxa/SFPark",
-  documentation_title: "PhotoGlobe Documentation",
-  documentation_link:
+  websiteTitle: "",
+  websiteLink: "",
+  sourceCodeTitle: "Park SF Source Code",
+  sourceCodeLink: "https://github.com/jonathanraxa/SFPark",
+  documentationTitle: "PhotoGlobe Documentation",
+  documentationLink:
     "https://docs.google.com/document/d/108y4XNghaYLmeczUfabqUDDPKtlEsnXY6cR1FMpN914/edit?usp=sharing",
   contribution: "Front-end application developer",
   languages: ["Android", "Java", "Google Maps API", "Park API"],
   date: "Sep 2014 – Dec 2014",
-  extra_resource: "",
+  extraResource: "",
   location: "SFSU",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: sfpark,
 };
 
-export const RUBYSCRIPT = {
+export const RUBYSCRIPT: ProjectData = {
   title: "LQ Digital Ruby Script",
   description:
     "Three Ruby scripts used for specfic HTML pages to find and replace certain values pertained only to the website.",
-  website_title: "",
-  website_link: "",
-  source_code_title: "LQ Digital Ruby Script Source Code",
-  source_code_link: "https://github.com/jonathanraxa/DirectoryTextReplacer",
-  documentation_title: "",
-  documentation_link: "",
+  websiteTitle: "",
+  websiteLink: "",
+  sourceCodeTitle: "LQ Digital Ruby Script Source Code",
+  sourceCodeLink: "https://github.com/jonathanraxa/DirectoryTextReplacer",
+  documentationTitle: "",
+  documentationLink: "",
   contribution: "All",
   languages: ["Ruby"],
   date: "Mar 2016",
-  extra_resource: "",
+  extraResource: "",
   location: "LQ Digial",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: script,
 };
 
-export const PERSONALWEBSITE = {
+export const PERSONALWEBSITE: ProjectData = {
   title: "Personal React-based Website",
   description: "ReactJS based website hosted on github pages.",
-  website_title: "Jonathan Raxa's Website",
-  website_link: "https://jonathanraxa.github.io/jonathan-raxa/",
-  source_code_title: "Personal React-based Website Source Code",
-  source_code_link: "https://github.com/jonathanraxa/jonathan-raxa",
-  documentation_title: "",
-  documentation_link: "",
+  websiteTitle: "Jonathan Raxa's Website",
+  websiteLink: "https://jonathanraxa.github.io/jonathan-raxa/",
+  sourceCodeTitle: "Personal React-based Website Source Code",
+  sourceCodeLink: "https://github.com/jonathanraxa/jonathan-raxa",
+  documentationTitle: "",
+  documentationLink: "",
   contribution: "All",
   languages: ["ReactJS", "JavaScript", "HTML/CSS"],
   date: "May 2019",
-  extra_resource: "",
+  extraResource: "",
   location: "San Francisco, CA",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: mywebsitev2,
 };
 
-export const GOOGLESCRIPT = {
+export const GOOGLESCRIPT: ProjectData = {
   title: "Promotional Templates",
   description: "Using Google Scripts to create HTML templates",
-  website_title: "Gap Inc. Europe",
-  website_link: "www.gap.eu",
-  source_code_title: "",
-  source_code_link: "",
-  documentation_title: "",
-  documentation_link: "",
+  websiteTitle: "Gap Inc. Europe",
+  websiteLink: "www.gap.eu",
+  sourceCodeTitle: "",
+  sourceCodeLink: "",
+  documentationTitle: "",
+  documentationLink: "",
   contribution: "All",
   languages: ["Google Scripts", "HTML/CSS"],
   date: "Feb 2019",
-  extra_resource: "",
+  extraResource: "",
   location: "Gap Inc. | San Francisco, CA",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: googlescript,
 };
 
-export const RENTALS = {
+export const RENTALS: ProjectData = {
   title: "SF Rent Calculator",
   description: "Rent calculator based on API data",
-  website_title: "",
-  website_link: "",
-  source_code_title: "Rentals Calculator",
-  source_code_link: "https://github.com/jonathanraxa/RentalsRecruitment",
-  documentation_title: "",
-  documentation_link: "",
+  websiteTitle: "",
+  websiteLink: "",
+  sourceCodeTitle: "Rentals Calculator",
+  sourceCodeLink: "https://github.com/jonathanraxa/RentalsRecruitment",
+  documentationTitle: "",
+  documentationLink: "",
   contribution: "All",
   languages: ["JavaScript/JQuery", "HTML/CSS", "NodeJS"],
   date: "Sep 2016",
-  extra_resource: "",
+  extraResource: "",
   location: "San Francisco, CA",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: rentals,
 };
 
-export const PROMODRAWER = {
+export const PROMODRAWER: ProjectData = {
   title: "SFCC Promo Drawer",
   description: "React JS based web application for promo drawer generatinon",
-  website_title: "SFCC Promo Drawer [heroku app]",
-  website_link: "http://sfccpromodrawer.herokuapp.com",
-  source_code_title: "Promo Drawer",
-  source_code_link: "https://github.com/jonathanraxa/promodrawer",
-  documentation_title: "",
-  documentation_link: "",
+  websiteTitle: "SFCC Promo Drawer [heroku app]",
+  websiteLink: "http://sfccpromodrawer.herokuapp.com",
+  sourceCodeTitle: "Promo Drawer",
+  sourceCodeLink: "https://github.com/jonathanraxa/promodrawer",
+  documentationTitle: "",
+  documentationLink: "",
   contribution: "All",
   languages: ["React JS", "JavaScript/JQuery", "HTML/CSS"],
   date: "Aug 2019",
-  extra_resource: "",
+  extraResource: "",
   location: "San Francisco, CA | Gap Inc.",
-  extra_resource_TF: false,
+  showExtraResource: false,
   image: promodrawer,
 };
 
-export const allPortfolio = [
+export const allPortfolio: ProjectData[] = [
   VIDEDU,
   TEMPLATE_CREATOR,
   _4UIMG,

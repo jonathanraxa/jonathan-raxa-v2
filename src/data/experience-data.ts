@@ -1,3 +1,4 @@
+import { ExperienceData } from "@/types";
 import sfsuLogo from "@/assets/img/companies/sfsulogo.png";
 import plm from "@/assets/img/companies/plm.svg";
 import lqdigital from "@/assets/img/companies/lq-logo.svg";
@@ -11,7 +12,7 @@ const currentYear = new Date().getFullYear();
 export const webDevYears = currentYear - WEB_DEV_START_YEAR;
 export const reactYears = currentYear - REACT_START_YEAR;
 
-export const sfsuExperienceData = {
+export const sfsuExperienceData: ExperienceData = {
   company: "San Francisco State University",
   location: "San Francisco, CA",
   companySummary: "Higher education institution based in San Francisco.",
@@ -30,7 +31,7 @@ export const sfsuExperienceData = {
   backgroundColor: "#2b286e",
 };
 
-export const dataRobotExperienceData = {
+export const dataRobotExperienceData: ExperienceData = {
   company: "DataRobot",
   location: "Boston, MA",
   companySummary:
@@ -51,7 +52,7 @@ export const dataRobotExperienceData = {
   backgroundColor: "#81fba5",
 };
 
-export const plmExperienceData = {
+export const plmExperienceData: ExperienceData = {
   company: "PatientsLikeMe",
   location: "Boston, MA",
   companySummary:
@@ -68,7 +69,7 @@ export const plmExperienceData = {
   companyLogo: plm,
   backgroundColor: "#ffde7c",
 };
-export const gapExperienceData = {
+export const gapExperienceData: ExperienceData = {
   company: "GAP Inc.",
   location: "San Francisco, CA",
   companySummary:
@@ -86,7 +87,7 @@ export const gapExperienceData = {
   companyLogo: gapinc,
   backgroundColor: "#adc9ff",
 };
-export const lqExperienceData = {
+export const lqExperienceData: ExperienceData = {
   company: "LQ Digital",
   location: "Emeryville, CA",
   companySummary:
@@ -104,7 +105,7 @@ export const lqExperienceData = {
   backgroundColor: "#d06437",
 };
 
-export const allExperiences = [
+export const allExperiences: ExperienceData[] = [
   dataRobotExperienceData,
   plmExperienceData,
   gapExperienceData,

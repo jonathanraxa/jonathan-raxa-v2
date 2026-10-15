@@ -1,4 +1,3 @@
-import React from "react";
 import { Contact } from "@/components/contact";
 import { Experience } from "./components/experience";
 import { Education } from "./components/education";

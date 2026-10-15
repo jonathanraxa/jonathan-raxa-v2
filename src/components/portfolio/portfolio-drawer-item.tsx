@@ -7,8 +7,9 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { PortfolioHero } from "./portfolio-hero";
+import { ProjectData } from "@/types";
 
-export const PortfolioDrawerItem = (item: any) => {
+export const PortfolioDrawerItem = (item: ProjectData) => {
   return (
     <Drawer>
       <DrawerTrigger className="group block min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] w-full relative overflow-hidden cursor-pointer transition-all duration-300">

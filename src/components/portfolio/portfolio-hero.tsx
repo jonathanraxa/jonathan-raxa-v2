@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { PortfolioHeroData } from "@/types";
+import { ProjectData } from "@/types";
 import { ProjectDetails } from "@/components/helpers/project-details";
 
 interface PortfolioHeroProps {
-  data: PortfolioHeroData;
+  data: ProjectData;
   closeButton?: React.ReactNode;
   title?: React.ReactNode;
   description?: React.ReactNode;
@@ -20,14 +20,14 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
 
   const {
     title: projectTitle,
-    extra_resource,
-    extra_resource_TF,
+    extraResource,
+    showExtraResource,
     image,
-  }: PortfolioHeroData = data;
+  }: ProjectData = data;
 
   // Check if this is a Vimeo video
   const isVimeoVideo =
-    extra_resource_TF && extra_resource && extra_resource.includes("vimeo.com");
+    showExtraResource && extraResource && extraResource.includes("vimeo.com");
 
   return (
     <div className="flex items-start justify-center bg-black text-gray-800 dark:text-gray-100 p-4">
@@ -50,7 +50,7 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
                   </div>
                 )}
                 <iframe
-                  src={extra_resource}
+                  src={extraResource}
                   className="absolute top-0 left-0 w-full h-full"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"

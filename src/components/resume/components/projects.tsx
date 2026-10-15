@@ -1,4 +1,3 @@
-import React from "react";
 import { allPortfolio } from "@/data/portfolio-data";
 import { ProjectItem } from "./project-item";
 

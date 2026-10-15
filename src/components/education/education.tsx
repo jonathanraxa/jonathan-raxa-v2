@@ -1,4 +1,3 @@
-import React from "react";
 import sfsuLogo from "@/assets/img/companies/sfsulogo.png";
 
 export const Education = () => (

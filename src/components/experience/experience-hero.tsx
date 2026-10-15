@@ -1,7 +1,7 @@
-import { ExperienceDataTypes } from "@/types/index";
+import { ExperienceData } from "@/types/index";
 
 interface ExperienceHeroProps {
-  data: ExperienceDataTypes;
+  data: ExperienceData;
   closeButton?: React.ReactNode;
   header?: React.ReactNode;
 }

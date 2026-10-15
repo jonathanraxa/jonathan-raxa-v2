@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Education = () => (
   <div className="Education" id="education">
     <div className="text-center mt-6 sm:mt-8">
