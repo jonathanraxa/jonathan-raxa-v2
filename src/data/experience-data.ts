@@ -4,6 +4,8 @@ import plm from "@/assets/img/companies/plm.svg";
 import lqdigital from "@/assets/img/companies/lq-logo.svg";
 import gapinc from "@/assets/img/companies/gaplogo.svg";
 import datarobot from "@/assets/img/companies/datarobot.svg";
+import halcyon from "@/assets/img/companies/halcyon.svg";
+import halcyonDarkText from "@/assets/img/companies/halcyon-dark-text.svg";
 
 // Years of experience, calculated so the site never goes stale
 const WEB_DEV_START_YEAR = 2016;
@@ -29,6 +31,22 @@ export const sfsuExperienceData: ExperienceData = {
   ],
   companyLogo: sfsuLogo,
   backgroundColor: "#2b286e",
+};
+
+export const halcyonExperienceData: ExperienceData = {
+  company: "Halcyon",
+  location: "Austin, TX",
+  companySummary:
+    "Cyber resilience platform that Global 2000 companies rely on to defeat ransomware, with fast endpoint recovery and data extortion prevention.",
+  positionSummary:
+    "Frontend engineer on Halcyon's cyber resilience platform, owning several projects end to end. Builds accessible, well-tested features with React and TypeScript, writes end-to-end tests with Playwright, and uses Claude AI to work more productively.",
+  title: "Front End Engineer",
+  start: "Nov 2025",
+  end: "Present",
+  duties: [],
+  companyLogo: halcyon,
+  companyLogoOnLight: halcyonDarkText,
+  backgroundColor: "#003058",
 };
 
 export const dataRobotExperienceData: ExperienceData = {
@@ -106,6 +124,7 @@ export const lqExperienceData: ExperienceData = {
 };
 
 export const allExperiences: ExperienceData[] = [
+  halcyonExperienceData,
   dataRobotExperienceData,
   plmExperienceData,
   gapExperienceData,

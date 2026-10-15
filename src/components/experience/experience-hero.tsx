@@ -14,6 +14,7 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   const {
     backgroundColor,
     companyLogo,
+    companyLogoOnLight,
     company,
     positionSummary,
     start,
@@ -31,7 +32,7 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({
           <div className="flex flex-col sm:flex-row items-start justify-start gap-4 sm:gap-6 md:gap-8">
             <div className="w-full sm:w-auto flex justify-center sm:justify-start">
               <img
-                src={companyLogo}
+                src={companyLogoOnLight ?? companyLogo}
                 alt={`${company} logo`}
                 className="max-w-[150px] sm:max-w-[200px] w-full object-contain"
               />
