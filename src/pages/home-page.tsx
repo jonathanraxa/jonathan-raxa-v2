@@ -17,22 +17,22 @@ export const HomePage = () => {
       <NavBar />
       <Hero />
       <Reveal>
-        <Experience />
-      </Reveal>
-      <Reveal>
         <AboutMe />
       </Reveal>
       <Reveal>
-        <GitHubProjects />
+        <Experience />
       </Reveal>
       <Reveal>
         <Portfolio />
       </Reveal>
       <Reveal>
-        <Other />
+        <GitHubProjects />
       </Reveal>
       <Reveal>
         <Education />
+      </Reveal>
+      <Reveal>
+        <Other />
       </Reveal>
       <div id="contact" className="scroll-mt-16">
         <Reveal>

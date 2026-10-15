@@ -4,12 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  faStar,
-  faCodeBranch,
-  faEye,
-  faExternalLinkAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 interface GitHubRepo {
   id: number;
@@ -19,10 +14,6 @@ interface GitHubRepo {
   homepage: string | null;
   language: string | null;
   stargazers_count: number;
-  forks_count: number;
-  watchers_count: number;
-  created_at: string;
-  updated_at: string;
   topics: string[];
   fork: boolean;
   archived: boolean;
@@ -191,35 +182,6 @@ export const GitHubProjects = () => {
                       </p>
                     )}
 
-                    {/* Stats */}
-                    <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-300 mb-3 flex-shrink-0">
-                      <div className="flex items-center gap-1">
-                        <FontAwesomeIcon
-                          icon={faStar}
-                          className="text-yellow-500"
-                        />
-                        <span className="font-medium">
-                          {repo.stargazers_count}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <FontAwesomeIcon
-                          icon={faCodeBranch}
-                          className="text-blue-500"
-                        />
-                        <span className="font-medium">{repo.forks_count}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <FontAwesomeIcon
-                          icon={faEye}
-                          className="text-green-500"
-                        />
-                        <span className="font-medium">
-                          {repo.watchers_count}
-                        </span>
-                      </div>
-                    </div>
-
                     {/* Topics */}
                     {repo.topics && repo.topics.length > 0 && (
                       <div className="mb-3 flex-shrink-0">
@@ -244,17 +206,20 @@ export const GitHubProjects = () => {
                       </div>
                     )}
 
-                    {/* Dates */}
-                    <div className="text-xs text-gray-500 dark:text-gray-300 mb-3 flex-shrink-0">
-                      <div className="mb-1">
-                        <span className="font-medium">Created:</span>{" "}
-                        {formatDate(repo.created_at)}
-                      </div>
-                      <div>
-                        <span className="font-medium">Updated:</span>{" "}
-                        {formatDate(repo.updated_at)}
-                      </div>
-                    </div>
+                    {/* Last activity, plus stars only when there are any */}
+                    <p className="text-xs text-gray-500 dark:text-gray-300 mb-3 flex-shrink-0">
+                      Updated {formatDate(repo.pushed_at)}
+                      {repo.stargazers_count > 0 && (
+                        <>
+                          {" · "}
+                          <FontAwesomeIcon
+                            icon={faStar}
+                            className="text-yellow-500"
+                          />{" "}
+                          {repo.stargazers_count}
+                        </>
+                      )}
+                    </p>
 
                     {/* Action Buttons - Always at bottom */}
                     <div className="space-y-2 mt-auto pt-3 flex-shrink-0">

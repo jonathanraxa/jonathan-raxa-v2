@@ -33,22 +33,21 @@ export const Other = () => (
           years as a struggling shy person, I realized the problem was how I
           approached this problem I had. That problem was to focus on authentic
           connection. I wrote this book to share my journey and the lessons I
-          learned along the way. The book is available on Amazon, and you can
-          find it{" "}
+          learned along the way. The book is available on Amazon, and you can{" "}
           <Link
             to={routes.amazon_book}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-yellow-500 transition-colors duration-200"
           >
-            here
+            find it on Amazon
           </Link>
           .
         </p>
       </div>
       <Dialog>
-        <DialogTrigger asChild>
-          <div className="px-4 lg:px-10">
+        <div className="px-4 lg:px-10">
+          <DialogTrigger asChild>
             <Button
               variant="outline"
               className="cursor-pointer hover:text-yellow-500 mt-6 lg:mt-10 uppercase transition-colors duration-200 w-full sm:w-auto"
@@ -56,8 +55,8 @@ export const Other = () => (
             >
               Learn more
             </Button>
-          </div>
-        </DialogTrigger>
+          </DialogTrigger>
+        </div>
         <DialogContent className="bg-indigo-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 max-h-[80vh] w-[95vw] lg:w-[80vw] max-w-[1000px] overflow-y-auto p-4 lg:p-6">
           <DialogHeader>
             <DialogTitle className="text-lg sm:text-xl lg:text-2xl">

@@ -1,4 +1,5 @@
 import family from "@/assets/img/me/family.jpeg";
+import familySmall from "@/assets/img/me/family-800.jpeg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
@@ -18,6 +19,8 @@ export const AboutMe = () => (
             loading="lazy"
             className="w-full h-auto object-cover"
             src={family}
+            srcSet={`${familySmall} 800w, ${family} 1066w`}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             alt="picture of family"
           />
         </div>

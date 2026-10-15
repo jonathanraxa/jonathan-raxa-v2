@@ -12,16 +12,40 @@ const NAV_LINKS = [
   { id: "contact", label: "Contact" },
 ];
 
-// Fixed nav bar that slides in once the visitor scrolls past the hero
+// Pixels below the top of the window where a section counts as "current"
+const ACTIVE_OFFSET = 120;
+
+// The whole section an anchor belongs to (some anchors sit on a heading)
+const getSectionElement = (id: string) => {
+  const anchor = document.getElementById(id);
+  return anchor?.closest("section") ?? anchor;
+};
+
+const getActiveSection = () => {
+  const atPageBottom =
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 4;
+  if (atPageBottom) return "contact";
+
+  return NAV_LINKS.find(({ id }) => {
+    const rect = getSectionElement(id)?.getBoundingClientRect();
+    return rect && rect.top <= ACTIVE_OFFSET && rect.bottom > ACTIVE_OFFSET;
+  })?.id;
+};
+
+// Fixed nav bar that slides in once the visitor scrolls past the hero,
+// highlighting the section currently on screen
 export const NavBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string | undefined>();
 
   useEffect(() => {
     const updateVisibility = () => {
       const pastHero = window.scrollY > window.innerHeight - 80;
       setIsVisible(pastHero);
       if (!pastHero) setIsMenuOpen(false);
+      setActiveId(getActiveSection());
     };
 
     updateVisibility();
@@ -58,7 +82,11 @@ export const NavBar = () => {
               key={id}
               type="button"
               onClick={() => goTo(id)}
-              className="cursor-pointer text-sm font-medium hover:text-yellow-500 transition-colors duration-200"
+              aria-current={activeId === id ? "location" : undefined}
+              className={cn(
+                "cursor-pointer text-sm font-medium hover:text-yellow-500 transition-colors duration-200",
+                activeId === id && "text-yellow-500",
+              )}
             >
               {label}
             </button>
@@ -93,7 +121,11 @@ export const NavBar = () => {
               key={id}
               type="button"
               onClick={() => goTo(id)}
-              className="cursor-pointer rounded-md px-2 py-3 text-left font-medium hover:bg-gray-800 hover:text-yellow-500"
+              aria-current={activeId === id ? "location" : undefined}
+              className={cn(
+                "cursor-pointer rounded-md px-2 py-3 text-left font-medium hover:bg-gray-800 hover:text-yellow-500",
+                activeId === id && "text-yellow-500",
+              )}
             >
               {label}
             </button>

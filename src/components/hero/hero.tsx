@@ -73,6 +73,7 @@ export const Hero = () => {
             <img
               src={pic}
               alt="Jonathan Raxa"
+              fetchPriority="high"
               className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-500 group-hover:opacity-0"
             />
             <img
