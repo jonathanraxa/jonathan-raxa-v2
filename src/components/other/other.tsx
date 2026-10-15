@@ -14,7 +14,7 @@ import { routes } from "@/routes/routes";
 import bookCover from "@/assets/img/logo/book-cover.jpg";
 
 export const Other = () => (
-  <div className="flex flex-col lg:flex-row justify-evenly w-full items-center py-4 lg:py-8 px-4 lg:px-8 gap-6 lg:gap-8">
+  <div className="mx-auto flex max-w-7xl flex-col lg:flex-row justify-evenly w-full items-center px-4 py-16 sm:px-8 sm:py-20 gap-6 lg:gap-8">
     <div className="w-full lg:w-1/2">
       <div className="p-4 lg:p-10">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 lg:mt-8 leading-tight">

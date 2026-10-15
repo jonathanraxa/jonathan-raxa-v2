@@ -24,7 +24,18 @@ export const Hero = () => {
               buttonClassName="size-8 sm:size-10"
             />
           </div>
+          <p className="mt-5 max-w-xl text-base text-gray-300 sm:text-lg">
+            I build accessible, well-tested web apps with React and TypeScript —
+            currently at Halcyon.
+          </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mt-8 content-center justify-center lg:justify-start">
+            <Button
+              size="lg"
+              className="cursor-pointer bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-400 text-base sm:text-sm px-6 py-3 sm:px-5 sm:py-2"
+              onClick={() => scrollToSection("portfolio")}
+            >
+              View my work
+            </Button>
             <Button
               size="lg"
               variant="outline"
@@ -40,14 +51,6 @@ export const Hero = () => {
               onClick={() => scrollToSection("experience")}
             >
               Experience
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
-              onClick={() => scrollToSection("portfolio")}
-            >
-              Portfolio
             </Button>
             <Button
               asChild
@@ -66,7 +69,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <div className="group relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px]">
+          <div className="group relative w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] lg:w-[440px] lg:h-[440px]">
             <img
               src={pic}
               alt="Jonathan Raxa"
@@ -74,7 +77,7 @@ export const Hero = () => {
             />
             <img
               src={pic2}
-              alt="Alternate view"
+              alt="Jonathan and Adeline"
               className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
             />
           </div>
@@ -82,7 +85,7 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Arrow */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 hidden transform -translate-x-1/2 animate-bounce sm:block">
         <Button
           variant="ghost"
           size="icon"

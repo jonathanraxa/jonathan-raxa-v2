@@ -4,6 +4,15 @@
    so everyone sees the same mix of light and dark sections */
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Print the resume on clean pages ("Save as PDF") */
+@page {
+  margin: 0.5in;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

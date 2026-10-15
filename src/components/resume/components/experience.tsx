@@ -93,7 +93,7 @@ export const Experience: React.FC = () => {
       {copySuccess && (
         <Button
           onClick={() => setCopySuccess(false)}
-          className="bg-black text-white text-base sm:text-lg py-2 px-4 rounded flex justify-center items-center mx-auto my-2 opacity-70 transition-opacity duration-200"
+          className="bg-black text-white text-base sm:text-lg py-2 px-4 rounded flex justify-center items-center mx-auto my-2 opacity-70 transition-opacity duration-200 print:hidden"
         >
           Copied!
         </Button>

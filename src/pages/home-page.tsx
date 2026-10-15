@@ -7,22 +7,39 @@ import { Other } from "@/components/other";
 import { Portfolio } from "@/components/portfolio";
 import { GitHubProjects } from "@/components/github-projects";
 import { ScrollToTopButton } from "@/components/helpers/scroll-to-top";
+import { Reveal } from "@/components/helpers/reveal";
 import { NavBar } from "@/components/nav-bar";
+import { Footer } from "@/components/footer";
 
 export const HomePage = () => {
   return (
     <>
       <NavBar />
       <Hero />
-      <Experience />
-      <AboutMe />
-      <GitHubProjects />
-      <Portfolio />
-      <Other />
-      <Education />
+      <Reveal>
+        <Experience />
+      </Reveal>
+      <Reveal>
+        <AboutMe />
+      </Reveal>
+      <Reveal>
+        <GitHubProjects />
+      </Reveal>
+      <Reveal>
+        <Portfolio />
+      </Reveal>
+      <Reveal>
+        <Other />
+      </Reveal>
+      <Reveal>
+        <Education />
+      </Reveal>
       <div id="contact" className="scroll-mt-16">
-        <Contact />
+        <Reveal>
+          <Contact />
+        </Reveal>
       </div>
+      <Footer />
       <ScrollToTopButton />
     </>
   );

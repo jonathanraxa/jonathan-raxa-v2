@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PortfolioDrawerItem } from "./portfolio-drawer-item";
 import { allPortfolio, featuredPortfolio } from "@/data/portfolio-data";
+import { SectionHeading } from "@/components/helpers/section-heading";
 
 export const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -13,14 +14,12 @@ export const Portfolio = () => {
     : featuredPortfolio;
 
   return (
-    <section className="px-4 pb-20 sm:px-8">
-      <div id="portfolio" className="scroll-mt-16 my-20 text-center">
-        <h2 className="uppercase text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
-          Portfolio Projects
-        </h2>
-        <p className="text-base sm:text-lg text-center mt-2">
-          My most proud projects.
-        </p>
+    <section className="px-4 pb-16 sm:px-8 sm:pb-20">
+      <div id="portfolio" className="scroll-mt-16 pt-16 sm:pt-20">
+        <SectionHeading
+          title="Portfolio Projects"
+          subtitle="My most proud projects."
+        />
       </div>
       <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (

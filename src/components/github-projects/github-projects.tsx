@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { SectionHeading } from "@/components/helpers/section-heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -121,16 +122,13 @@ export const GitHubProjects = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full p-6 pb-14 bg-gray-600/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
+      className="w-full px-4 py-16 sm:px-8 sm:py-20 bg-gray-600/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
     >
-      <div className="mt-10 mb-8">
-        <h2 className="uppercase text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white">
-          GitHub Projects
-        </h2>
-        <p className="text-base sm:text-lg text-center mt-2 text-white">
-          What I've been working on lately
-        </p>
-      </div>
+      <SectionHeading
+        title="GitHub Projects"
+        subtitle="What I've been working on lately"
+        className="text-white"
+      />
 
       {loading && (
         <div className="flex min-h-[200px] flex-col items-center justify-center space-y-2">
