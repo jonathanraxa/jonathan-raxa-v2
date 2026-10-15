@@ -7,10 +7,12 @@ import { Other } from "@/components/other";
 import { Portfolio } from "@/components/portfolio";
 import { GitHubProjects } from "@/components/github-projects";
 import { ScrollToTopButton } from "@/components/helpers/scroll-to-top";
+import { NavBar } from "@/components/nav-bar";
 
 export const HomePage = () => {
   return (
     <>
+      <NavBar />
       <Hero />
       <Experience />
       <AboutMe />
@@ -18,7 +20,9 @@ export const HomePage = () => {
       <Portfolio />
       <Other />
       <Education />
-      <Contact />
+      <div id="contact" className="scroll-mt-16">
+        <Contact />
+      </div>
       <ScrollToTopButton />
     </>
   );

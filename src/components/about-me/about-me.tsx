@@ -9,7 +9,7 @@ import { SocialLinks } from "@/components/helpers/social-links";
 export const AboutMe = () => (
   <div
     id="about-me"
-    className="bg-gray-50 dark:bg-gray-200 flex flex-col lg:flex-row justify-center w-full items-center py-4 sm:py-8 px-4 sm:px-8"
+    className="scroll-mt-16 bg-gray-50 dark:bg-gray-200 flex flex-col lg:flex-row justify-center w-full items-center py-4 sm:py-8 px-4 sm:px-8"
   >
     <div className="w-full lg:w-1/2 mb-6 lg:mb-0 lg:pr-8">
       <div className="w-full h-full object-cover rounded-lg overflow-hidden">
