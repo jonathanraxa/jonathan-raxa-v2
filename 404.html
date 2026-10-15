@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=/" />
     <script>
-      window.onload = () => {
-        const path = location.pathname + location.search + location.hash;
-        sessionStorage.redirect = path;
-      };
+      // Save the requested path before redirecting so the app can restore it
+      sessionStorage.redirect =
+        location.pathname + location.search + location.hash;
+      location.replace("/");
     </script>
+    <noscript><meta http-equiv="refresh" content="0;url=/" /></noscript>
   </head>
   <body>
     <p>Redirecting...</p>
