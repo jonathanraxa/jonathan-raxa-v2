@@ -5,7 +5,6 @@ import lqdigital from "@/assets/img/companies/lq-logo.svg";
 import gapinc from "@/assets/img/companies/gaplogo.svg";
 import datarobot from "@/assets/img/companies/datarobot.svg";
 import halcyon from "@/assets/img/companies/halcyon.svg";
-import halcyonDarkText from "@/assets/img/companies/halcyon-dark-text.svg";
 
 // Years of experience, calculated so the site never goes stale
 const WEB_DEV_START_YEAR = 2016;
@@ -45,7 +44,6 @@ export const halcyonExperienceData: ExperienceData = {
   end: "Present",
   duties: [],
   companyLogo: halcyon,
-  companyLogoOnLight: halcyonDarkText,
   backgroundColor: "#003058",
 };
 

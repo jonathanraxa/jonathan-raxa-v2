@@ -8,8 +8,6 @@ export interface ExperienceData {
   end: string;
   duties: string[];
   companyLogo: string;
-  // Optional version of the logo for the white card in the detail drawer
-  companyLogoOnLight?: string;
   backgroundColor: string;
 }
 

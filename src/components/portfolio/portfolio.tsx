@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PortfolioDrawerItem } from "./portfolio-drawer-item";
+import { PortfolioItem } from "./portfolio-item";
 import { allPortfolio, featuredPortfolio } from "@/data/portfolio-data";
 import { SectionHeading } from "@/components/helpers/section-heading";
 
@@ -23,7 +23,7 @@ export const Portfolio = () => {
       </div>
       <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <PortfolioDrawerItem key={project.title} {...project} />
+          <PortfolioItem key={project.title} {...project} />
         ))}
       </div>
       {otherProjects.length > 0 && (

@@ -1,4 +1,4 @@
-import { ExperienceDrawerItem } from "./experience-drawer-item";
+import { ExperienceItem } from "./experience-item";
 import { allExperiences } from "@/data/experience-data";
 import { SectionHeading } from "@/components/helpers/section-heading";
 
@@ -11,7 +11,7 @@ export const Experience = () => (
     />
     <div className="flex flex-col lg:flex-row">
       {allExperiences.map((item, index) => (
-        <ExperienceDrawerItem key={`experience-${index}`} data={item} />
+        <ExperienceItem key={`experience-${index}`} data={item} />
       ))}
     </div>
   </section>
