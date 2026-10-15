@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
 
 export const Other = () => (
-  <div className="Education" id="education">
+  <div className="Other" id="other">
     <div className="text-center mt-6 sm:mt-8">
       <h2 className="uppercase text-xl sm:text-2xl font-bold">Other</h2>
     </div>

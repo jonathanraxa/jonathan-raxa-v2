@@ -18,6 +18,7 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
   const [videoLoading, setVideoLoading] = useState(true);
 
   const {
+    title: projectTitle,
     website_title,
     website_link,
     source_code_title,
@@ -63,7 +64,7 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
-                  title={`${title} project video`}
+                  title={`${projectTitle} project video`}
                   onError={() => setVideoError(true)}
                   onLoad={() => setVideoLoading(false)}
                 />
@@ -71,7 +72,7 @@ export const PortfolioHero: React.FC<PortfolioHeroProps> = ({
             ) : (
               <img
                 src={image}
-                alt={`${title} project image`}
+                alt={`${projectTitle} project image`}
                 className="max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] w-full h-auto object-contain"
               />
             )}

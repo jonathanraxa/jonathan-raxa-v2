@@ -24,43 +24,49 @@ export const Hero = () => {
             <div className="text-xl sm:text-2xl">Front End Engineer</div>
             <div className="flex gap-3">
               <Button
+                asChild
                 variant="secondary"
                 size="icon"
                 className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
               >
-                <Link
-                  to={routes.github}
+                <a
+                  href={routes.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub"
                 >
                   <FontAwesomeIcon icon={faGithub} />
-                </Link>
+                </a>
               </Button>
               <Button
+                asChild
                 variant="secondary"
                 size="icon"
                 className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
               >
-                <Link
-                  to={routes.linkedin}
+                <a
+                  href={routes.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
-                </Link>
+                </a>
               </Button>
               <Button
+                asChild
                 variant="secondary"
                 size="icon"
                 className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
               >
-                <Link
-                  to={routes.devto}
+                <a
+                  href={routes.devto}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="DEV Community"
                 >
                   <FontAwesomeIcon icon={faDev} />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
@@ -99,6 +105,7 @@ export const Hero = () => {
               Portfolio
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"

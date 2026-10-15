@@ -87,6 +87,7 @@ export const AboutMe = () => (
             Experience
           </Button>
           <Button
+            asChild
             variant="outline"
             className="cursor-pointer hover:text-yellow-500 transition-colors duration-200"
           >
@@ -96,30 +97,34 @@ export const AboutMe = () => (
           </Button>
           <div className="flex gap-3 sm:gap-5 justify-center sm:justify-start">
             <Button
+              asChild
               variant="secondary"
               size="icon"
               className="size-10 cursor-pointer hover:text-yellow-500 transition-colors duration-200"
             >
-              <Link
-                to={routes.github}
+              <a
+                href={routes.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <FontAwesomeIcon icon={faGithub} />
-              </Link>
+              </a>
             </Button>
             <Button
+              asChild
               variant="secondary"
               size="icon"
               className="size-10 cursor-pointer hover:text-yellow-500 transition-colors duration-200"
             >
-              <Link
-                to={routes.linkedin}
+              <a
+                href={routes.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

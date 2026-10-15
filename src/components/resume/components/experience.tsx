@@ -1,54 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
-import {
-  drDuties,
-  plmDuties,
-  gapDuties,
-  lqDuties,
-  sfsuDuties,
-  allExperiences,
-} from "@/data/experience-data";
-
-// TODO: We could iterate through these experiences
+import { allExperiences } from "@/data/experience-data";
 
 export const Experience: React.FC = () => {
   const [copySuccess, setCopySuccess] = useState<boolean>(false);
 
+  // Hide the "Copied!" message after a couple of seconds
+  useEffect(() => {
+    if (!copySuccess) return;
+    const timeout = setTimeout(() => setCopySuccess(false), 2000);
+    return () => clearTimeout(timeout);
+  }, [copySuccess]);
+
   const copyText = (val: string): void => {
-    if (
-      [
-        "dr-duties",
-        "plm-duties",
-        "gap-duties",
-        "lq-duties",
-        "sfsu-duties",
-      ].includes(val)
-    ) {
-      switch (val) {
-        case "dr-duties":
-          navigator.clipboard.writeText(drDuties);
-          break;
-        case "plm-duties":
-          navigator.clipboard.writeText(plmDuties);
-          break;
-        case "gap-duties":
-          navigator.clipboard.writeText(gapDuties);
-          break;
-        case "lq-duties":
-          navigator.clipboard.writeText(lqDuties);
-          break;
-        case "sfsu-duties":
-          navigator.clipboard.writeText(sfsuDuties);
-          break;
-        default:
-          break;
-      }
-      setCopySuccess(true);
-    } else {
-      navigator.clipboard.writeText(val);
-      setCopySuccess(true);
-    }
+    navigator.clipboard
+      .writeText(val)
+      .then(() => setCopySuccess(true))
+      .catch((err) => console.error("Failed to copy text: ", err));
   };
 
   return (
@@ -81,14 +50,14 @@ export const Experience: React.FC = () => {
               <div className="text-center sm:text-right text-sm sm:text-base">
                 <span
                   className="cursor-pointer hover:text-yellow-600 transition-colors duration-200"
-                  onClick={() => copyText("Aug 2021")}
+                  onClick={() => copyText(exp.start)}
                 >
                   {exp.start}
                 </span>
                 {" - "}
                 <span
                   className="cursor-pointer hover:text-yellow-600 transition-colors duration-200"
-                  onClick={() => copyText("May 2025")}
+                  onClick={() => copyText(exp.end)}
                 >
                   {exp.end}
                 </span>
@@ -98,7 +67,7 @@ export const Experience: React.FC = () => {
               <i>{exp.companySummary}</i>
             </div>
             <div
-              onClick={() => copyText("Front-End Software Engineer")}
+              onClick={() => copyText(exp.title)}
               className="cursor-pointer hover:text-yellow-600 bold mt-3 text-sm sm:text-base transition-colors duration-200"
             >
               <strong>{exp.title}</strong>
