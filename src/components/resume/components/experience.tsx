@@ -21,16 +21,16 @@ export const Experience: React.FC = () => {
   };
 
   return (
-    <div id="experience" className="relative space-y-4 sm:space-y-6">
+    <div id="experience" className="relative space-y-4">
       <div className="text-center mt-6 sm:mt-8">
         <h2 className="uppercase text-xl sm:text-2xl font-bold">Experience</h2>
       </div>
 
       {allExperiences.map((exp) => {
         return (
-          <div className="mb-8 sm:mb-10" key={exp.company}>
+          <div className="mb-6 break-inside-avoid" key={exp.company}>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
-              <div className="flex flex-row items-center gap-1">
+              <div className="flex flex-row items-center">
                 <span
                   onClick={() => copyText(exp.company)}
                   className="uppercase cursor-pointer hover:text-yellow-600 text-center transition-colors duration-200"
@@ -54,7 +54,7 @@ export const Experience: React.FC = () => {
                 >
                   {exp.start}
                 </span>
-                {" - "}
+                {" – "}
                 <span
                   className="cursor-pointer hover:text-yellow-600 transition-colors duration-200"
                   onClick={() => copyText(exp.end)}

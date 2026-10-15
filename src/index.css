@@ -10,7 +10,33 @@
 
 /* Print the resume on clean pages ("Save as PDF") */
 @page {
-  margin: 0.5in;
+  margin: 0.45in;
+}
+
+/* Smaller base size when printing, so rem-based text fits on fewer pages */
+@media print {
+  html {
+    font-size: 11.5px;
+  }
+
+  /* Tighter spacing on the printed resume; the screen layout stays roomy */
+  .resume * {
+    line-height: 1.35 !important;
+  }
+  .resume h2 {
+    margin-top: 0.9rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .resume li {
+    margin-top: 0.15rem !important;
+  }
+  .resume #experience > div {
+    margin-bottom: 0.6rem !important;
+  }
+  .resume #portfolio button {
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+  }
 }
 
 :root {

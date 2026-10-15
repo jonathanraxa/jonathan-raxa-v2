@@ -11,30 +11,37 @@ export const Header = () => (
     </div>
     <div className="text-center mt-3 sm:mt-4">
       <div className="text-base sm:text-lg">Austin Metropolitan Area, TX</div>
-      <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10 text-sm sm:text-base">
+      <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-sm sm:text-base">
         <a
           href="mailto:jonathanraxa@gmail.com"
-          className="hover:text-yellow-600 cursor-pointer transition-colors duration-200"
+          className="hover:text-yellow-600 transition-colors duration-200"
         >
-          Email
+          jonathanraxa@gmail.com
         </a>
         <span className="hidden sm:inline">|</span>
         <a
           href={routes.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-yellow-600 cursor-pointer transition-colors duration-200"
+          className="hover:text-yellow-600 transition-colors duration-200"
         >
-          LinkedIn <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} /> linkedin.com/in/jonathanraxa
         </a>
         <span className="hidden sm:inline">|</span>
         <a
           href={routes.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-yellow-600 cursor-pointer transition-colors duration-200"
+          className="hover:text-yellow-600 transition-colors duration-200"
         >
-          GitHub <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} /> github.com/jonathanraxa
+        </a>
+        <span className="hidden sm:inline">|</span>
+        <a
+          href="https://jonathanraxa.com"
+          className="hover:text-yellow-600 transition-colors duration-200"
+        >
+          jonathanraxa.com
         </a>
       </div>
     </div>
