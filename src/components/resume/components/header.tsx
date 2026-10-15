@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { routes } from "@/routes/routes";
 
 export const Header = () => (
   <>
@@ -19,7 +20,7 @@ export const Header = () => (
         </a>
         <span className="hidden sm:inline">|</span>
         <a
-          href="https://www.linkedin.com/in/jonathanraxa/"
+          href={routes.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-yellow-600 cursor-pointer transition-colors duration-200"
@@ -28,7 +29,7 @@ export const Header = () => (
         </a>
         <span className="hidden sm:inline">|</span>
         <a
-          href="https://github.com/jonathanraxa/"
+          href={routes.github}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-yellow-600 cursor-pointer transition-colors duration-200"

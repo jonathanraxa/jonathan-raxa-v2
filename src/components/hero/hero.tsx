@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
+import { scrollToSection } from "@/lib/utils";
+import { SocialLinks } from "@/components/helpers/social-links";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faDev,
-} from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import pic from "@/assets/img/me/jonathan-raxa.jpg";
 import pic2 from "@/assets/img/me/me-and-adeline.jpg";
@@ -22,63 +19,17 @@ export const Hero = () => {
           </h1>
           <div className="mt-2 flex flex-col sm:flex-row content-center justify-center items-center gap-3 sm:gap-5">
             <div className="text-xl sm:text-2xl">Front End Engineer</div>
-            <div className="flex gap-3">
-              <Button
-                asChild
-                variant="secondary"
-                size="icon"
-                className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
-              >
-                <a
-                  href={routes.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="secondary"
-                size="icon"
-                className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
-              >
-                <a
-                  href={routes.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="secondary"
-                size="icon"
-                className="size-8 sm:size-10 cursor-pointer hover:text-yellow-500"
-              >
-                <a
-                  href={routes.devto}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="DEV Community"
-                >
-                  <FontAwesomeIcon icon={faDev} />
-                </a>
-              </Button>
-            </div>
+            <SocialLinks
+              sites={["github", "linkedin", "devto"]}
+              buttonClassName="size-8 sm:size-10"
+            />
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mt-8 content-center justify-center lg:justify-start">
             <Button
               size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
-              onClick={() => {
-                const section = document.getElementById("about-me");
-                section?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => scrollToSection("about-me")}
             >
               About me
             </Button>
@@ -86,10 +37,7 @@ export const Hero = () => {
               size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
-              onClick={() => {
-                const section = document.getElementById("experience");
-                section?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => scrollToSection("experience")}
             >
               Experience
             </Button>
@@ -97,10 +45,7 @@ export const Hero = () => {
               size="lg"
               variant="outline"
               className="cursor-pointer hover:text-yellow-500 text-base sm:text-sm px-6 py-3 sm:px-4 sm:py-2"
-              onClick={() => {
-                const section = document.getElementById("portfolio");
-                section?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => scrollToSection("portfolio")}
             >
               Portfolio
             </Button>
@@ -142,10 +87,7 @@ export const Hero = () => {
           variant="ghost"
           size="icon"
           className="size-12 sm:size-14 cursor-pointer hover:text-yellow-500 transition-all duration-300 hover:scale-110"
-          onClick={() => {
-            const section = document.getElementById("about-me");
-            section?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={() => scrollToSection("about-me")}
         >
           <div className="flex flex-col items-center justify-center">
             <div className="text-sm sm:text-base">About me</div>

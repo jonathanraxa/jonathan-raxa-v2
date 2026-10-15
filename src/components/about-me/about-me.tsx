@@ -1,10 +1,10 @@
 import React from "react";
 import family from "@/assets/img/me/family.jpeg";
 import { Button } from "@/components/ui/button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import { routes } from "@/routes/routes";
+import { scrollToSection } from "@/lib/utils";
+import { SocialLinks } from "@/components/helpers/social-links";
 
 export const AboutMe = () => (
   <div
@@ -79,10 +79,7 @@ export const AboutMe = () => (
           <Button
             variant="outline"
             className="cursor-pointer hover:text-yellow-500 transition-colors duration-200"
-            onClick={() => {
-              const section = document.getElementById("experience");
-              section?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={() => scrollToSection("experience")}
           >
             Experience
           </Button>
@@ -95,38 +92,10 @@ export const AboutMe = () => (
               Resume
             </Link>
           </Button>
-          <div className="flex gap-3 sm:gap-5 justify-center sm:justify-start">
-            <Button
-              asChild
-              variant="secondary"
-              size="icon"
-              className="size-10 cursor-pointer hover:text-yellow-500 transition-colors duration-200"
-            >
-              <a
-                href={routes.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="secondary"
-              size="icon"
-              className="size-10 cursor-pointer hover:text-yellow-500 transition-colors duration-200"
-            >
-              <a
-                href={routes.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </Button>
-          </div>
+          <SocialLinks
+            className="sm:gap-5 justify-center sm:justify-start"
+            buttonClassName="transition-colors duration-200"
+          />
         </div>
       </div>
     </div>

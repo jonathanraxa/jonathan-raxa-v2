@@ -5,26 +5,12 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { PortfolioHeroData } from "@/types";
+import { ProjectDetails } from "@/components/helpers/project-details";
 
 interface PortfolioHeroProps extends PortfolioHeroData {}
 
-export const ProjectItem: React.FC<PortfolioHeroProps> = ({
-  title,
-  description,
-  website_title,
-  website_link,
-  source_code_title,
-  source_code_link,
-  documentation_title,
-  documentation_link,
-  contribution,
-  languages,
-  date,
-  extra_resource,
-  location,
-  extra_resource_TF,
-  image,
-}) => {
+export const ProjectItem: React.FC<PortfolioHeroProps> = (props) => {
+  const { title, description, date, location, image } = props;
   const [isClicked, setIsClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -79,79 +65,7 @@ export const ProjectItem: React.FC<PortfolioHeroProps> = ({
             <p className="text-sm sm:text-base leading-relaxed">
               {description}
             </p>
-            {location && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Location:</span> {location}
-              </p>
-            )}
-            {date && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Date:</span> {date}
-              </p>
-            )}
-            {contribution && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Contribution:</span> {contribution}
-              </p>
-            )}
-            {website_link && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Website:</span>{" "}
-                <a
-                  href={website_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700 transition-colors duration-200 break-all"
-                >
-                  {website_title || website_link}
-                </a>
-              </p>
-            )}
-            {source_code_link && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Source Code:</span>{" "}
-                <a
-                  href={source_code_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700 transition-colors duration-200 break-all"
-                >
-                  {source_code_title || source_code_link}
-                </a>
-              </p>
-            )}
-            {documentation_link && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Documentation:</span>{" "}
-                <a
-                  href={documentation_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700 transition-colors duration-200 break-all"
-                >
-                  {documentation_title || documentation_link}
-                </a>
-              </p>
-            )}
-            {extra_resource_TF && extra_resource && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Extra Resource:</span>{" "}
-                <a
-                  href={extra_resource}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700 transition-colors duration-200 break-all"
-                >
-                  {extra_resource}
-                </a>
-              </p>
-            )}
-            {languages && languages.length > 0 && (
-              <p className="text-sm sm:text-base">
-                <span className="font-bold">Languages:</span>{" "}
-                {languages.join(", ")}
-              </p>
-            )}
+            <ProjectDetails data={props} />
           </div>
         </div>
       </CollapsibleContent>
