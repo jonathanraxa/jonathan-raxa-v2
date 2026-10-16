@@ -62,40 +62,40 @@ export const ExperienceItem = ({ data }: ExperienceItemProps) => {
 
       <DialogContent
         showCloseButton={false}
-        className="max-h-[90vh] gap-0 overflow-y-auto rounded-2xl border-0 bg-white p-0 text-gray-900 sm:max-w-2xl"
+        className="max-h-[90vh] gap-0 overflow-y-auto rounded-2xl border-0 bg-white p-0 text-gray-900 sm:max-w-3xl"
       >
         {/* Header in the company's color */}
         <div
           style={{ backgroundColor }}
           className={cn(
-            "flex flex-col gap-4 px-6 py-6 pr-16 sm:flex-row sm:items-center sm:px-8",
+            "flex flex-col gap-5 px-6 py-8 pr-16 sm:flex-row sm:items-center sm:gap-8 sm:px-12 sm:py-10 sm:pr-20",
             textOnColor,
           )}
         >
           <img
             src={companyLogo}
             alt=""
-            className="h-14 w-auto max-w-[140px] object-contain"
+            className="h-16 w-auto max-w-[160px] object-contain"
           />
           <div>
-            <DialogTitle className="text-2xl font-bold leading-tight">
+            <DialogTitle className="text-2xl font-bold leading-tight sm:text-3xl">
               {company}
             </DialogTitle>
-            <DialogDescription className="mt-1 font-semibold text-inherit">
+            <DialogDescription className="mt-2 font-semibold text-inherit">
               {title}
             </DialogDescription>
-            <p className="text-sm opacity-80">
+            <p className="mt-1 text-sm opacity-80">
               {start} – {end} · {location}
             </p>
           </div>
         </div>
         <DialogCloseButton />
 
-        <div className="space-y-4 px-6 py-6 text-base leading-relaxed sm:px-8">
+        <div className="space-y-6 px-6 py-8 text-base leading-7 sm:px-12 sm:py-10">
           <p className="italic text-gray-600">{companySummary}</p>
           <p className="font-medium">{positionSummary}</p>
           {duties.length > 0 && (
-            <ul className="list-disc space-y-2 pl-5">
+            <ul className="list-disc space-y-3 pl-5">
               {duties.map((duty) => (
                 <li key={duty}>{duty.replace(/^•\s*/, "")}</li>
               ))}
