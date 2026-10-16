@@ -105,7 +105,7 @@ export const Writing = () => {
     <section ref={sectionRef} className="px-4 py-16 sm:px-8 sm:py-20">
       <SectionHeading
         title="Writing"
-        subtitle="Things I've learned, written down on DEV."
+        subtitle="Writing = learning."
       />
 
       {status !== "done" ? (
